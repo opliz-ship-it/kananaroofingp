@@ -242,7 +242,7 @@ export const content: Record<'en' | 'ar', Content> = {
       ]
     },
     services: {
-      title: "خدماتنا",
+      title: "خاتنا",
       subtitle: "حلول أسقف شاملة",
       items: [
         {
