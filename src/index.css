@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-terracotta-50: #FDF6F4;
+  --color-terracotta-100: #FAECEA;
+  --color-terracotta-200: #F3D0C9;
+  --color-terracotta-300: #EBB3A9;
+  --color-terracotta-400: #E49788;
+  --color-terracotta-500: #E07A5F;
+  --color-terracotta-600: #C65D47;
+  --color-terracotta-700: #A34836;
+  --color-terracotta-800: #80382A;
+  --color-terracotta-900: #5F281E;
+
+  --color-industrial-gray: #2D3436;
+  --color-industrial-light: #F8F9FA;
+
+  --font-en: 'Inter', sans-serif;
+  --font-ar: 'Cairo', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-industrial-light text-industrial-gray antialiased;
+    font-family: var(--font-en);
+  }
+
+  body.rtl {
+    font-family: var(--font-ar);
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+/* Custom Scrollbar for industrial feel - Optional */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-terracotta-500);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-terracotta-600);
+}
