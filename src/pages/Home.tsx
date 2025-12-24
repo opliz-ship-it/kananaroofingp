@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'; // ضفنا دي عشان الـ State
 import SEO from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 import { content } from '../data/content';
@@ -8,13 +7,6 @@ import project1 from '../assets/project1.png';
 import project2 from '../assets/project2.png';
 import project3 from '../assets/project3.png';
 import heroBg from '../assets/hero-bg.jpg';
-import { client, urlFor } from '../client'; // ضفنا دي عشان نكلم Sanity
-
-// تعريف شكل البيانات اللي جاية من Sanity
-interface SanityData {
-    title: string;
-    heroImage: any;
-}
 
 const Home = () => {
     const { language } = useLanguage();
@@ -22,41 +14,14 @@ const Home = () => {
     const isRTL = language === 'ar';
     const arrowIcon = isRTL ? <ChevronRight className="rotate-180" /> : <ChevronRight />;
 
-    // 1. مكان نخزن فيه البيانات اللي جاية من لوحة التحكم
-    const [cmsData, setCmsData] = useState<SanityData | null>(null);
-
-    // 2. أول ما الصفحة تفتح، روح هات البيانات من Sanity
-    useEffect(() => {
-        client.fetch('*[_type == "homepage"][0]')
-            .then((data) => {
-                console.log("Sanity Data:", data); // للتأكد إن البيانات وصلت
-                setCmsData(data);
-            })
-            .catch((err) => console.error("Error loading Sanity data:", err));
-    }, []);
-
-    // 3. نحدد هنعرض أنهي صورة وأنهي عنوان؟
-    // لو فيه صورة جاية من Sanity استخدمها، لو مفيش استخدم الصورة القديمة (heroBg)
-    const activeBgImage = cmsData?.heroImage
-        ? urlFor(cmsData.heroImage).width(1920).url()
-        : heroBg;
-
-    // لو فيه عنوان جاي من Sanity استخدمه، لو مفيش استخدم العنوان القديم
-    const activeTitle = cmsData?.title || text.hero.title;
-
     return (
         <div className="flex flex-col">
             <SEO lang={language} />
             {/* Hero Section */}
-            <section id="hero" className="min-h-screen flex items-center justify-center bg-industrial-light relative bg-cover bg-center bg-no-repeat"
-                style={{
-                    // هنا التغيير السحري: الصورة بقت متغيرة
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(${activeBgImage})`
-                }}>
+            <section id="hero" className="min-h-screen flex items-center justify-center bg-industrial-light relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(${heroBg})` }}>
                 <div className="container mx-auto px-4 text-center z-10">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-md">
-                        {/* هنا التغيير السحري: العنوان بقى متغير */}
-                        {activeTitle}
+                        {text.hero.title}
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-sm">
                         {text.hero.subtitle}
@@ -73,7 +38,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* باقي الأقسام زي ما هي بالظبط */}
             {/* About Summary */}
             <section id="about" className="section-padding py-20 bg-white">
                 <div className="container mx-auto px-4">
