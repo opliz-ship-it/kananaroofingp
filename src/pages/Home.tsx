@@ -113,7 +113,7 @@ const Home = () => {
                     <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">{text.projects.desc}</p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {projects.map((proj, index) => (
+                        {projects.slice(0, 3).map((proj, index) => (
                             <div key={index} className="group relative overflow-hidden rounded-lg aspect-video">
                                 <img src={proj.img} alt={`Project ${index + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
