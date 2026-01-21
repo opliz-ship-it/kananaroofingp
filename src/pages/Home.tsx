@@ -3,9 +3,10 @@ import { useLanguage } from '../context/LanguageContext';
 import { content } from '../data/content';
 import Link from '../components/Link';
 import { CheckCircle, ChevronRight } from 'lucide-react';
-import project1 from '../assets/project1.png';
-import project2 from '../assets/project2.png';
-import project3 from '../assets/project3.png';
+import project1 from '../assets/project1.jpg';
+import project2 from '../assets/project2.jpg';
+import project3 from '../assets/project3.jpg';
+import project4 from '../assets/project4.jpg';
 import heroBg from '../assets/hero-bg.jpg';
 
 const Home = () => {
@@ -93,7 +94,7 @@ const Home = () => {
                     <h2 className="text-3xl font-bold text-center text-terracotta-600 mb-4">{text.projects.title}</h2>
                     <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">{text.projects.desc}</p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div className="group relative overflow-hidden rounded-lg aspect-video">
                             <img src={project1} alt="Project 1" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -110,6 +111,12 @@ const Home = () => {
                             <img src={project3} alt="Project 3" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                                 <span className="text-white font-bold text-lg">Residential</span>
+                            </div>
+                        </div>
+                        <div className="group relative overflow-hidden rounded-lg aspect-video">
+                            <img src={project4} alt="Project 4" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span className="text-white font-bold text-lg">Commercial</span>
                             </div>
                         </div>
                     </div>
