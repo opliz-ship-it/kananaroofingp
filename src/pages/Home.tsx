@@ -7,6 +7,11 @@ import project1 from '../assets/project1.jpg';
 import project2 from '../assets/project2.jpg';
 import project3 from '../assets/project3.jpg';
 import project4 from '../assets/project4.jpg';
+import project5 from '../assets/project5.jpg';
+import project6 from '../assets/project6.jpg';
+import project7 from '../assets/project7.jpg';
+import project8 from '../assets/project8.jpg';
+import project9 from '../assets/project9.jpg';
 import heroBg from '../assets/hero-bg.jpg';
 
 const Home = () => {
@@ -14,6 +19,19 @@ const Home = () => {
     const text = content[language];
     const isRTL = language === 'ar';
     const arrowIcon = isRTL ? <ChevronRight className="rotate-180" /> : <ChevronRight />;
+
+    // Array of project images with titles
+    const projects = [
+        { img: project1, title: "Industrial" },
+        { img: project2, title: "Skylight" },
+        { img: project3, title: "Residential" },
+        { img: project4, title: "Commercial" },
+        { img: project5, title: "Industrial" },
+        { img: project6, title: "Residential" },
+        { img: project7, title: "Skylight" },
+        { img: project8, title: "Commercial" },
+        { img: project9, title: "Industrial" },
+    ];
 
     return (
         <div className="flex flex-col">
@@ -94,31 +112,15 @@ const Home = () => {
                     <h2 className="text-3xl font-bold text-center text-terracotta-600 mb-4">{text.projects.title}</h2>
                     <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">{text.projects.desc}</p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div className="group relative overflow-hidden rounded-lg aspect-video">
-                            <img src={project1} alt="Project 1" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <span className="text-white font-bold text-lg">Industrial</span>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {projects.map((proj, index) => (
+                            <div key={index} className="group relative overflow-hidden rounded-lg aspect-video">
+                                <img src={proj.img} alt={`Project ${index + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span className="text-white font-bold text-lg">{proj.title}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="group relative overflow-hidden rounded-lg aspect-video">
-                            <img src={project2} alt="Project 2" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <span className="text-white font-bold text-lg">Skylight</span>
-                            </div>
-                        </div>
-                        <div className="group relative overflow-hidden rounded-lg aspect-video">
-                            <img src={project3} alt="Project 3" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <span className="text-white font-bold text-lg">Residential</span>
-                            </div>
-                        </div>
-                        <div className="group relative overflow-hidden rounded-lg aspect-video">
-                            <img src={project4} alt="Project 4" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <span className="text-white font-bold text-lg">Commercial</span>
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
                     <div className="text-center mt-12">
@@ -142,5 +144,6 @@ const Home = () => {
         </div>
     );
 };
+
 
 export default Home;
