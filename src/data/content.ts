@@ -4,6 +4,7 @@ export interface NavItems {
   services: string;
   projects: string;
   contact: string;
+  quote: string;
 }
 
 export interface HeroSection {
@@ -12,6 +13,8 @@ export interface HeroSection {
   description: string;
   cta: string;
   services_cta: string;
+  catalog_cta: string;
+  starting_price: string;
 }
 
 export interface ValueItem {
@@ -52,8 +55,10 @@ export interface ProjectsSection {
 
 export interface ContactForm {
   name: string;
+  company: string;
   email: string;
   phone: string;
+  projectType: string;
   message: string;
   submit: string;
 }
@@ -62,6 +67,10 @@ export interface ContactInfo {
   address: string;
   email: string;
   phone: string;
+  displayPhone: string;
+  whatsapp: string;
+  workingHours: string;
+  googleMapsUrl: string;
 }
 
 export interface ContactSection {
@@ -71,225 +80,640 @@ export interface ContactSection {
   info: ContactInfo;
 }
 
+export interface TechnicalSpec {
+  id: string;
+  title: string;
+  value: string;
+  desc: string;
+}
+
+export interface ProductSpecsSection {
+  title: string;
+  subtitle: string;
+  tag: string;
+  engineering_note: string;
+  starting_price_note: string;
+  specs: TechnicalSpec[];
+  advantages: { title: string; desc: string }[];
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface FAQSection {
+  title: string;
+  subtitle: string;
+  items: FAQItem[];
+}
+
+export interface QuoteFormLabels {
+  modalTitle: string;
+  modalSubtitle: string;
+  name: string;
+  namePlaceholder: string;
+  company: string;
+  companyPlaceholder: string;
+  phone: string;
+  phonePlaceholder: string;
+  whatsapp: string;
+  whatsappPlaceholder: string;
+  projectType: string;
+  projectTypes: string[];
+  governorate: string;
+  governorates: string[];
+  product: string;
+  products: string[];
+  quantity: string;
+  quantityPlaceholder: string;
+  dimensions: string;
+  dimensionsPlaceholder: string;
+  thickness: string;
+  thicknesses: string[];
+  color: string;
+  colors: string[];
+  notes: string;
+  notesPlaceholder: string;
+  submitWhatsApp: string;
+  submitEmail: string;
+  submitting: string;
+  successTitle: string;
+  successDesc: string;
+  close: string;
+}
+
 export interface FooterSection {
   rights: string;
+  quick_links: string;
+  catalog: string;
+  factory_location: string;
 }
 
 export interface Content {
+  companyName: string;
+  companyOfficialName: string;
   nav: NavItems;
   hero: HeroSection;
   about: AboutSection;
   services: ServicesSection;
   projects: ProjectsSection;
+  specs: ProductSpecsSection;
+  faq: FAQSection;
+  quote: QuoteFormLabels;
   contact: ContactSection;
   footer: FooterSection;
 }
 
 export const content: Record<'en' | 'ar', Content> = {
   en: {
+    companyName: "Kanana Roof",
+    companyOfficialName: "Kanana Roof",
     nav: {
       home: "Home",
       about: "About Us",
       services: "Services",
       projects: "Projects",
       contact: "Contact Us",
+      quote: "Request a Quote",
     },
     hero: {
-      title: "Kanana Roofing Sheet",
-      subtitle: "Your Secure Investment for a Lasting Roof",
-      description: "Specialized in manufacturing high-quality PVC and Polycarbonate roofing sheets for residential, commercial, and industrial sectors.",
-      cta: "Get a Quote",
-      services_cta: "Our Services"
+      title: "Kanana Roof",
+      subtitle: "UPVC Sheets Manufacturing & Supply",
+      description: "Direct manufacturer of heavy-duty, 4-layer UPVC & Polycarbonate roofing sheets engineered with ASA anti-weathering technology for industrial hangars, commercial facilities, and residential roofs.",
+      cta: "Request a Quote",
+      services_cta: "Technical Specs",
+      catalog_cta: "Download Technical Catalog (PDF)",
+      starting_price: "Starting from competitive factory prices / m²",
+    },
+    specs: {
+      tag: "Engineers & Factory Owners Section",
+      title: "UPVC Roofing Sheets Engineering Specifications",
+      subtitle: "Heavy-duty 4-layer co-extrusion technology designed to replace traditional metal and corrugated sheets with zero corrosion.",
+      engineering_note: "Rigid engineering tests conducted for fire safety, thermal reduction, high mechanical strength, and 100% chemical corrosion resistance.",
+      starting_price_note: "Direct Factory Pricing: Starting from competitive factory rates per m² (Custom cut lengths up to 12 meters).",
+      specs: [
+        {
+          id: "thickness",
+          title: "Thickness Options",
+          value: "1.5mm - 2.0mm - 2.5mm - 3.0mm",
+          desc: "Multiple thicknesses engineered for different purlin spans and structural load requirements."
+        },
+        {
+          id: "dimensions",
+          title: "Dimensions & Width",
+          value: "1130 mm (1050 mm Effective)",
+          desc: "Full width of 1130mm providing a net effective roofing coverage of 1050mm after overlap, with custom lengths up to 12 meters."
+        },
+        {
+          id: "weight",
+          title: "Unit Weight",
+          value: "3.2 - 5.5 kg/m²",
+          desc: "Lightweight profile drastically lowers steel structural burden while offering superior impact resistance."
+        },
+        {
+          id: "colors",
+          title: "Factory Colors",
+          value: "Terracotta Red, Royal Blue, Pure White, Slate Grey",
+          desc: "Surface infused with genuine ASA polymer layer to prevent fading, chalking, and UV deterioration for decades."
+        },
+        {
+          id: "thermal",
+          title: "Thermal Insulation",
+          value: "Conductivity: 0.14 W/m.K (8-10°C Cooler)",
+          desc: "Cuts indoor temperature by up to 10°C compared to zinc and galvanized corrugated steel, drastically reducing cooling electricity bills."
+        },
+        {
+          id: "sound",
+          title: "Acoustic / Sound Insulation",
+          value: "Up to 30 dB Noise Reduction",
+          desc: "Eliminates torrential rain and hail noise, maintaining a serene and quiet interior in factories and livestock facilities."
+        },
+        {
+          id: "corrosion",
+          title: "Chemical & Corrosion Resistance",
+          value: "100% Acid, Alkali, Salt & Ammonia Immune",
+          desc: "Will NEVER rust or corrode. Perfect for chemical plants, fertilizers, coastal warehouses, and poultry farms."
+        },
+        {
+          id: "fire",
+          title: "Fire Safety Rating",
+          value: "Class B1 Flame Retardant",
+          desc: "Self-extinguishing material; stops burning immediately when fire source is removed, producing zero flaming droplets."
+        },
+        {
+          id: "warranty",
+          title: "Manufacturer Warranty",
+          value: "10-Year Documented Warranty",
+          desc: "Comprehensive 10-year factory warranty against manufacturing defects, material degradation, and color fading."
+        }
+      ],
+      advantages: [
+        { title: "Zero Corrosion", desc: "Immune to moisture, acid rain, industrial fumes, and seaside salt humidity." },
+        { title: "High Impact Strength", desc: "Withstands heavy hail, mechanical impacts, and heavy loads without cracking." },
+        { title: "Energy Efficient", desc: "Reflects solar UV rays and traps interior climate, lowering HVAC power consumption." },
+        { title: "Quick Installation", desc: "Easy to handle, cut, and fasten with self-drilling waterproof screws and caps." }
+      ]
     },
     about: {
       title: "About Us",
-      subtitle: "   ",
-      story: "We provide more than just roofing sheets; we deliver a comprehensive engineering solution that addresses the shortcomings of traditional materials. Here are 6 reasons why we are your ideal choice:",
-      our_values_title: "Our Values",
-      our_values_text: "We accept no compromises; our products are engineered to endure and last, backed by a genuine 10-year warranty and an ASA layer that preserves color vibrancy.",
+      subtitle: "Kanana Roof - Sadat City Industrial Zone",
+      story: "Kanana Roof is a premier Egyptian manufacturer specialized in co-extruded UPVC and Polycarbonate roofing systems. From our modern industrial plant in Sadat City, Menoufia, we provide industrial complexes, agricultural hangars, and commercial projects with state-of-the-art roofing alternatives to outdated metal sheets.",
+      our_values_title: "Our Quality Commitment",
+      our_values_text: "We make no compromises in raw material purity. Our products are formulated with European-grade stabilizers and top-tier ASA weatherable resin, backed by an official 10-year manufacturer guarantee.",
       mission_title: "Our Mission",
       mission: [
         {
-          title: "Industrial Innovation",
-          desc: "Utilizing advanced ASA technology to guarantee exceptional color stability and resistance to fading."
+          title: "Advanced Manufacturing",
+          desc: "Harnessing multi-layer co-extrusion and ASA technology to ensure decades of color stability and physical integrity."
         },
         {
-          title: "Environmental Sustainability",
-          desc: "Providing an eco-friendly product that serves as a superior alternative to traditional metal roofing sheets."
+          title: "Eco-Friendly Engineering",
+          desc: "Supplying 100% recyclable, asbestos-free, and energy-saving roofing alternatives to toxic or corrosive traditional sheets."
         },
         {
-          title: "Reliable Quality",
-          desc: "Offering a 10-year warranty, along with fire resistance, and superior sound and thermal insulation."
+          title: "Certified Reliability",
+          desc: "Enforcing rigorous testing protocols for flame retardancy, acoustic attenuation, and extreme temperature tolerance."
         },
         {
-          title: "Global Expansion",
-          desc: "Launching from Sadat City to meet the demands of international markets and expand our global footprint."
+          title: "Nationwide & Regional Reach",
+          desc: "Prompt logistics and specialized technical support delivered directly from our Sadat City factory across all Egyptian governorates."
         }
       ],
       vision_title: "Our Vision",
-      vision: "To have Kanana Roofing Sheets cover every project seeking safety and sustainability, becoming the trusted partner for businesses and homes in Egypt and across the globe.",
-      values_title: "Why Choose Kanana Roofing Sheets?",
+      vision: "To be the leading and most trusted manufacturer of high-performance architectural and industrial roofing sheets in Egypt, the Middle East, and Africa.",
+      values_title: "Why Choose Kanana Roof UPVC Sheets?",
       values: [
-        { title: "Advanced ASA Technology", desc: "Our products guarantee exceptional color stability and superior resistance to Ultra-Violet (UV) rays, keeping your facility looking brand new for years without fading." },
-        { title: "Triple-Action Insulation", desc: "Say goodbye to scorching summer heat and the noise of rain. Our sheets provide thermal insulation to lower indoor temperatures, acoustic insulation to ensure quietness, and light insulation for total comfort." },
-        { title: "Total Safety & Fire Resistance", desc: "Safety is our top priority. Kenana sheets are manufactured from self-extinguishing and flame-retardant materials, providing maximum protection for factories, warehouses, and homes." },
-        { title: "A Real 10-Year Warranty", desc: "Because we trust our manufacturing quality and raw materials at our Sadat City factory, we offer a documented 10-year warranty against manufacturing defects and specification changes." },
-        { title: "Sustainability & Eco-Friendliness", desc: "We are proud to offer a \"Green\" alternative to traditional metal sheets. Our products are free from harmful substances, fully recyclable, and contribute to reducing energy consumption thanks to their insulation properties." },
-        { title: "A Team Dedicated to Excellence", desc: "Behind our products stands a team of highly skilled technical experts trained to the highest global standards, ensuring precision in production and professionalism in supply and service." }
+        { title: "Advanced ASA UV Shield", desc: "Our surface layer uses co-extruded ASA resin ensuring vibrant, fade-proof colors despite scorching Egyptian summer sunlight." },
+        { title: "Triple Action Insulation", desc: "Simultaneous thermal reduction, acoustic silence during rainstorms, and superior electrical non-conductivity." },
+        { title: "Maximum Safety & Fire Retardancy", desc: "Meets international Class B1 self-extinguishing safety codes for industrial plants and hazardous warehouses." },
+        { title: "Official 10-Year Warranty", desc: "Genuine documentation guaranteeing chemical stability, zero leakage, and structural durability." },
+        { title: "Green & Energy Saving", desc: "Reduces thermal heat transfer into buildings, slashing cooling loads and electrical consumption." },
+        { title: "Dedicated Engineering Support", desc: "Our technical team offers purlin spacing guidelines, bill-of-quantities calculations, and installation guidance." }
       ]
     },
     services: {
       title: "Our Services",
-      subtitle: "Comprehensive Roofing Solutions",
+      subtitle: "Comprehensive Manufacturing & Engineering Support",
       items: [
         {
-          title: "PVC Roofing Sheets Manufacturing",
-          desc: "High-quality PVC sheets known for durability, weather resistance, and thermal insulation."
+          title: "UPVC Sheets Manufacturing & Supply",
+          desc: "Continuous automated manufacturing with tailored custom lengths up to 12 meters per sheet for large-scale hangars."
         },
         {
           title: "Polycarbonate Roofing Sheets",
-          desc: "Versatile and strong polycarbonate sheets suitable for skylights and greenhouses."
+          desc: "High-transparency and tinted polycarbonate sheets engineered for daylight skylights, swimming pools, and architectural canopy covers."
         },
         {
-          title: "Delivery & Installation",
-          desc: "Professional installation teams and secure delivery to your site."
+          title: "Nationwide Supply & Logistics",
+          desc: "Secure packaging and prompt heavy transport dispatch directly from our Sadat City plant to any jobsite across Egypt."
         },
         {
-          title: "Technical Support",
-          desc: "Expert advice and support for all your roofing technical needs."
+          title: "Engineering Technical Support",
+          desc: "Structural guidance on steel purlin pitch, fixing accessories, thermal expansion allowances, and slope specifications."
         },
         {
-          title: "Design Consultation",
-          desc: "Customized design solutions to match your architectural vision."
+          title: "Custom Quantity & Color Consultation",
+          desc: "Personalized design consultations and BOQ optimization to prevent material waste and reduce client costs."
         }
       ]
     },
     projects: {
       title: "Our Projects",
-      subtitle: "A Glimpse of Our Excellence",
-      desc: "Browse through our gallery of completed residential, commercial, and industrial projects."
+      subtitle: "Proven Real-World Performance",
+      desc: "Explore our track record of completed industrial hangars, poultry farms, storage warehouses, and residential structures."
+    },
+    faq: {
+      title: "Frequently Asked Questions (FAQ)",
+      subtitle: "Clear answers to the most common questions from engineers, contractors, and project owners.",
+      items: [
+        {
+          question: "Why should I choose UPVC roofing sheets over traditional corrugated steel / galvanized sheets (الصاج)?",
+          answer: "Traditional corrugated sheets rust, transfer extreme summer heat indoors, amplify deafening rain noise, and need replacement every few years. Kanana Roof UPVC sheets NEVER rust, cut indoor temperature by up to 10°C, dampen rain sound by up to 30 dB, and come with a 10-year documented warranty."
+        },
+        {
+          question: "Are Kanana Roof UPVC sheets fire resistant?",
+          answer: "Yes, our sheets are rated Class B1 flame retardant. They are self-extinguishing—meaning if exposed to flame, they will not fuel or propagate the fire and will stop burning immediately once the heat source is removed."
+        },
+        {
+          question: "What is the warranty period and what does it cover?",
+          answer: "We provide an official 10-year manufacturer warranty covering manufacturing defects, material degradation, structural integrity, and abnormal color fading under direct sunlight (due to our genuine ASA protective layer)."
+        },
+        {
+          question: "Do you supply and deliver to all Egyptian governorates?",
+          answer: "Yes, we dispatch directly from our factory in Sadat City (7th Industrial Zone) to all Egyptian governorates—including Cairo, Giza, Alexandria, Delta, Suez Canal, and Upper Egypt—with secure loading and fast turnaround."
+        },
+        {
+          question: "Can I order custom sheet lengths to match my steel frame design?",
+          answer: "Absolutely! We manufacture custom lengths tailored to your project requirements up to 12 meters per sheet, eliminating transverse overlaps and preventing water leaks."
+        }
+      ]
+    },
+    quote: {
+      modalTitle: "Request an Official Price Quote",
+      modalSubtitle: "Direct from the Factory - Fill out your project details for an immediate quote and technical consultation.",
+      name: "Full Name",
+      namePlaceholder: "Enter your full name",
+      company: "Company / Factory Name",
+      companyPlaceholder: "Enter company or enterprise name (optional)",
+      phone: "Phone Number",
+      phonePlaceholder: "e.g. 01027000979",
+      whatsapp: "WhatsApp Number",
+      whatsappPlaceholder: "e.g. 01027000979",
+      projectType: "Project Type",
+      projectTypes: [
+        "Industrial Factory / Hangar",
+        "Agricultural / Poultry Farm",
+        "Storage Warehouse",
+        "Residential Villa / Roof Pergola",
+        "Commercial Shed / Canopy",
+        "Sports Facility / Skylight",
+        "Other"
+      ],
+      governorate: "Governorate / Project Location",
+      governorates: [
+        "Cairo",
+        "Giza",
+        "Menoufia / Sadat City",
+        "Alexandria",
+        "Sharqia / 10th of Ramadan",
+        "Qalyubia",
+        "Beheira",
+        "Gharbia",
+        "Dakahlia",
+        "Suez / Ismailia / Port Said",
+        "Beni Suef / Fayoum",
+        "Upper Egypt Governorates",
+        "Red Sea / South Sinai",
+        "Outside Egypt (Export)"
+      ],
+      product: "Requested Product",
+      products: [
+        "UPVC 4-Layer Roofing Sheets (Corrugated)",
+        "UPVC Trapeze Profile Sheets",
+        "Polycarbonate Solid / Hollow Sheets",
+        "Roofing Ridge Caps & Screws Accessories",
+        "Complete Roofing System (Sheets + Installation Advice)"
+      ],
+      quantity: "Estimated Quantity (m² or sheet count)",
+      quantityPlaceholder: "e.g. 500 m² or 120 sheets",
+      dimensions: "Required Sheet Lengths & Dimensions",
+      dimensionsPlaceholder: "e.g. 6-meter sheets, 8-meter sheets, or custom",
+      thickness: "Required Thickness",
+      thicknesses: ["1.5 mm", "2.0 mm (Recommended)", "2.5 mm (Heavy Duty)", "3.0 mm (Industrial High Load)"],
+      color: "Preferred Color",
+      colors: ["Terracotta Red (قرميدي)", "Royal Blue (أزرق ملكي)", "Pure White (أبيض)", "Slate Grey (رمادي)"],
+      notes: "Project Blueprint / Additional Notes",
+      notesPlaceholder: "Mention specific details, steel purlin distances, delivery timeline, or questions...",
+      submitWhatsApp: "Send via WhatsApp (Fastest)",
+      submitEmail: "Send via Email",
+      submitting: "Preparing request...",
+      successTitle: "Quote Request Sent Successfully!",
+      successDesc: "Thank you for reaching out to Kanana Roof. Our sales engineering team in Sadat City will review your specifications and contact you shortly.",
+      close: "Close"
     },
     contact: {
       title: "Contact Us",
-      subtitle: "Get In Touch",
+      subtitle: "Direct Factory Inquiries & Visits",
       form: {
         name: "Name",
+        company: "Company Name",
         email: "Email",
-        phone: "Phone",
+        phone: "Phone Number",
+        projectType: "Project Type",
         message: "Message",
         submit: "Send Message"
       },
       info: {
-        address: "Egypt, Menoufia, Sadat City, 5th Industrial Zone, Plot 115",
+        address: "Egypt, Menoufia, Sadat City, 7th Industrial Zone",
         email: "kananaroof@gmail.com",
-        phone: "+201222522624"
+        phone: "+201027000979",
+        displayPhone: "01027000979",
+        whatsapp: "+201027000979",
+        workingHours: "Saturday - Thursday: 8:00 AM - 5:00 PM (Friday Closed)",
+        googleMapsUrl: "https://maps.google.com/?q=Sadat+City+7th+Industrial+Zone+Egypt"
       }
     },
     footer: {
-      rights: "© 2025 Kanana Roofing Sheet. All Rights Reserved."
+      rights: "© 2025 Kanana Roof. All Rights Reserved.",
+      quick_links: "Quick Links",
+      catalog: "Technical Catalog PDF",
+      factory_location: "Sadat City Industrial Zone"
     }
   },
   ar: {
+    companyName: "كنانة رووف",
+    companyOfficialName: "كنانة رووف (Kanana Roof)",
     nav: {
       home: "الرئيسية",
       about: "من نحن",
       services: "خدماتنا",
       projects: "مشاريعنا",
       contact: "تواصل معنا",
+      quote: "اطلب عرض سعر",
     },
     hero: {
-      title: "كنانه روفنج شيت",
-      subtitle: "استثمارك الآمن لسقف يدوم",
-      description: "متخصصون في تصنيع وإنتاج ألواح الاسقف (PVC) والبولي كربونايت للقطاعات السكنية والتجارية والصناعية.",
+      title: "كنانة رووف",
+      subtitle: "تصنيع وتوريد ألواح UPVC للأسقف",
+      description: "المصنع المتخصص في إنتاج وتوريد ألواح الـ UPVC والبولي كربونايت رباعية الطبقات المعزولة حرارياً والمحمية بتقنية ASA ضد العوامل الجوية، البديل الهندسي الأقوى للصاج المعرج للمصانع، الهناجر، المستودعات، والمزارع.",
       cta: "اطلب عرض سعر",
-      services_cta: "خدماتنا"
+      services_cta: "المواصفات الهندسية",
+      catalog_cta: "تحميل الكتالوج الفني (PDF)",
+      starting_price: "تبدأ من أسعار المصنع التنافسية / م²",
+    },
+    specs: {
+      tag: "قسم خاص بالمهندسين والمصانع والمقاولين",
+      title: "المواصفات الفنية والهندسية لألواح UPVC",
+      subtitle: "تقنية البثق المتعدد الرباعية المعالجة بمادة ASA لمقاومة التآكل والصدمات وتوفير عزل ثلاثي المفعول.",
+      engineering_note: "خضعت الألواح لأعلى اختبارات الجودة الميكانيكية، مقاومة الحريق، العزل الصوتي والحراري، ومقاومة الأحماض والأملاح بنسبة 100%.",
+      starting_price_note: "أسعار مباشرة من المصنع: تبدأ من أسعار تنافسية للمتر المربع (مع إمكانية قص أطوال خاصة حتى 12 متراً).",
+      specs: [
+        {
+          id: "thickness",
+          title: "السُمك المتاح (Thickness)",
+          value: "1.5 مم - 2.0 مم - 2.5 مم - 3.0 مم",
+          desc: "سماكات متعددة تناسب مختلف المسافات بين التيوبات (Purlins) وأحمال الرياح والجمالونات."
+        },
+        {
+          id: "dimensions",
+          title: "الأبعاد والعرض (Dimensions)",
+          value: "العرض الكلي 1130 مم (الصافي الفعال 1050 مم)",
+          desc: "يوفر عرض اللوح تغطية صافية واسعة بعد احتساب الركوب، مع إمكانية تصنيع أي طول مطلوب حتى 12 متراً لتفادي الوصلات."
+        },
+        {
+          id: "weight",
+          title: "الوزن الهندسي (Weight)",
+          value: "3.2 إلى 5.5 كجم / م²",
+          desc: "خفيف الوزن يقلل الحمل الميت على الهياكل والجمالونات المعدنية مع متانة فائقة ضد الكسر والصدمات."
+        },
+        {
+          id: "colors",
+          title: "ألوان المصنع (Colors)",
+          value: "قرميدي (Terracotta)، أزرق ملكي، أبيض عاجي، رمادي",
+          desc: "طبقة خارجية غنية ببوليمر ASA الأصلي المقاوم للأشعة فوق البنفسجية لضمان ثبات اللون لسنوات طويلة دون بهتان."
+        },
+        {
+          id: "thermal",
+          title: "العزل الحراري (Thermal Insulation)",
+          value: "معامل توصيل 0.14 W/m.K (فارق 8-10 درجات مئوية)",
+          desc: "يخفض درجات الحرارة داخل المصانع والمزارع بنسبة تصل إلى 10 درجات مقارنة بالصاج المعرج، مما يوفر فاتورة التبريد والكهرباء."
+        },
+        {
+          id: "sound",
+          title: "العزل الصوتي (Sound Insulation)",
+          value: "عزل ضوضاء حتى 30 ديسيبل",
+          desc: "يمنع تماماً صوت المطر الشديد وحبات البرد، مما يوفر بيئة عمل هادئة ومثالية لحظائر الإنتاج الحيواني والمصانع."
+        },
+        {
+          id: "corrosion",
+          title: "مقاومة التآكل والكيماويات (Chemical Resistance)",
+          value: "مقاومة 100% للأحماض والأملاح والأمونيا والصدأ",
+          desc: "لا يصدأ ولا يتآكل نهائياً؛ مثالي لمصانع الكيماويات والأسمدة والمناطق الساحلية ومزارع الدواجن والماشية."
+        },
+        {
+          id: "fire",
+          title: "مقاومة الحريق (Fire Retardancy)",
+          value: "فئة B1 ذاتي الإطفاء",
+          desc: "مادة غير مساعدة على الاشتعال؛ تنطفئ ذاتياً فور إبعاد مصدر اللهب ولا تنتج قطرات مشتعلة أثناء الحريق."
+        },
+        {
+          id: "warranty",
+          title: "الضمان المعتمد (Warranty)",
+          value: "ضمان حقيقي موثق لمدة 10 سنوات",
+          desc: "ضمان رسمي من مصنعنا بمدينة السادات ضد عيوب التصنيع وتغير المواصفات وتآكل المواد."
+        }
+      ],
+      advantages: [
+        { title: "وداعاً للصدأ والتآكل", desc: "حصانة كاملة ضد الرطوبة والأبخرة الكيميائية ورذاذ البحر المالح." },
+        { title: "قوة تحمل وصدمات عالية", desc: "مرونة هندسية تمنع التشقق أو الانكسار تحت الأحمال والظروف الجوية القاسية." },
+        { title: "توفير فائق في الطاقة", desc: "يعكس أشعة الشمس الحارقة ويحفظ البرودة الداخلية مما يخفض استهلاك المكيفات." },
+        { title: "سهولة وسرعة التركيب", desc: "سهل القص والتشكيل والتثبيت بمسامير مخصصة ومحكمة الغلق ضد تسريب المياه." }
+      ]
     },
     about: {
       title: "من نحن",
-      subtitle: "   ",
-      story: "نحن نقدم أكثر من مجرد ألواح أسقف؛ نحن نقدم حلاً هندسياً شاملاً يعالج عيوب المواد التقليدية. إليك 6 أسباب تجعلنا خيارك الأمثل:",
-      our_values_title: "قيمنا",
-      our_values_text: "نحن لا نقبل المساومة؛ منتجاتنا مصممة لتدوم وتتحمل، مدعومة بضمان حقيقي لمدة 10 سنوات وطبقة ASA التي تحافظ على حيوية الألوان.",
+      subtitle: "كنانة رووف - المنطقة الصناعية السابعة بمدينة السادات",
+      story: "شركة كنانة رووف هي أحد الصروح الصناعية المتخصصة في إنتاج وتصنيع أنظمة الأسقف الحديثة من ألواح UPVC والبولي كربونايت. انطلاقاً من مصنعنا المتطور في المنطقة الصناعية السابعة بمدينة السادات بمحافظة المنوفية، نقدم حلولاً هندسية متكاملة تعالج كافة عيوب الصاج التقليدي والمعادن المعرضة للتآكل.",
+      our_values_title: "التزامنا بالجودة",
+      our_values_text: "نحن لا نقبل المساومة في خاماتنا؛ نعتمد على أنقى المواد الخام مع إضافات الحماية الأوروبية وطبقة الـ ASA لضمان منتج يعيش لعقود، مدعوماً بضمان معتمد لمدة 10 سنوات.",
       mission_title: "مهمتنا",
       mission: [
         {
           title: "الابتكار الصناعي",
-          desc: "استخدام تقنية ASA المتقدمة لضمان ثبات استثنائي للألوان ومقاومة للبهتان."
+          desc: "استخدام أحدث خطوط الإنتاج والتقنيات متعددة الطبقات لتوفير أسقف ذات عمر افتراضي طويل وألوان ثابتة."
         },
         {
-          title: "الاستدامة البيئية",
-          desc: "تقديم منتج صديق للبيئة يعتبر بديلاً متفوقاً لألواح الأسقف المعدنية التقليدية."
+          title: "حلول مستدامة وخضراء",
+          desc: "توفير منتج صديق للبيئة، خالٍ من الأسبستوس، موفر للطاقة، وبديل متفوق للألواح المعدنية."
         },
         {
-          title: "جودة موثوقة",
-          desc: "تقديم ضمان لمدة 10 سنوات، إلى جانب مقاومة الحريق، وعزل صوتي وحراري فائق."
+          title: "أعلى معايير الأمان",
+          desc: "تطبيق معايير السلامة المهنية ومقاومة الحريق والعزل الحراري والصوتي المعتمد دولياً."
         },
         {
-          title: "التوسع العالمي",
-          desc: "الانطلاق من مدينة السادات لتلبية طلبات الأسواق الدولية وتوسيع بصمتنا العالمية."
+          title: "تغطية كافة محافظات مصر والتصدير",
+          desc: "التوريد السريع بأسطول نقل متخصص من مدينة السادات إلى جميع المشروعات في أنحاء الجمهورية والأسواق الإقليمية."
         }
       ],
       vision_title: "رؤيتنا",
-      vision: "أن تغطي ألواح كنانة سقف كل مشروع يبحث عن الأمان والاستدامة، لنصبح الشريك الموثوق للأعمال والمنازل في مصر وحول العالم.",
-      values_title: "لماذا تختار ألواح كنانه؟",
+      vision: "أن تصبح ألواح كنانة الخيار الهندسي الأول والموثوق لكل مصنع، هنجر، مزرعة، ومنشأة تبحث عن الأمان الكامل، العزل الفائق، والاستدامة الاقتصادية في مصر والشرق الأوسط.",
+      values_title: "لماذا يفضل المهندسون والمصانع ألواح كنانة؟",
       values: [
-        { title: "تقنية ASA المتطورة", desc: "تضمن منتجاتنا ثباتاً استثنائياً للألوان ومقاومة فائقة للأشعة فوق البنفسجية (UV)، مما يحافظ على مظهر منشأتك جديداً لسنوات دون بهتان." },
-        { title: "عزل ثلاثي المفعول", desc: "وداعاً لحرارة الصيف الحارقة وضجيج المطر. توفر ألواحنا عزلاً حرارياً لخفض درجات الحرارة الداخلية، وعزلاً صوتياً لضمان الهدوء، وعزلاً ضوئياً لراحة تامة." },
-        { title: "أمان تام ومقاومة للحريق", desc: "الأمان هو أولويتنا القصوى. تُصنع ألواح كنانة من مواد ذاتية الإطفاء ومقاومة للاشتعال، مما يوفر أقصى درجات الحماية للمصانع والمستودعات والمنازل." },
-        { title: "ضمان حقيقي لمدة 10 سنوات", desc: "لأننا نثق في جودة تصنيعنا وموادنا الخام في مصنعنا بمدينة السادات، نقدم ضماناً موثقاً لمدة 10 سنوات ضد عيوب الصناعة وتغير المواصفات." },
-        { title: "استدامة وصداقة للبيئة", desc: "نفخر بتقديم بديل \"أخضر\" للألواح المعدنية التقليدية. منتجاتنا خالية من المواد الضارة، وقابلة لإعادة التدوير بالكامل، وتساهم في تقليل استهلاك الطاقة بفضل خصائص العزل." },
-        { title: "فريق مكرس للتميز", desc: "يقف خلف منتجاتنا فريق من الخبراء الفنيين المهرة المدربين على أعلى المعايير العالمية، لضمان الدقة في الإنتاج والاحترافية في التوريد والخدمة." }
+        { title: "تقنية ASA المتطورة", desc: "تضمن ثباتاً استثنائياً للألوان ومقاومة قصوى للأشعة فوق البنفسجية UV في شمس الصيف الحارقة." },
+        { title: "عزل ثلاثي المفعول", desc: "عزل حراري لخفض الحرارة، عزل صوتي يمتص ضجيج الأمطار، وعزل كامل للكهرباء لأقصى أمان." },
+        { title: "أمان تام ومقاوم للحريق", desc: "ألواح ذاتية الإطفاء مصنعة وفق تصنيف B1 الصارم لسلامة المنشآت والمستودعات والمصانع." },
+        { title: "ضمان حقيقي موثق 10 سنوات", desc: "لأننا نصنع بأعلى المعايير في مدينة السادات، نمنح عملاءنا ضماناً رسمياً موثقاً لمدة 10 سنوات." },
+        { title: "اقتصادية وصديقة للبيئة", desc: "تخفض استهلاك الكهرباء، ولا تحتاج لصيانة دورية أو دهانات ضد الصدأ، وتدوم أضعاف عمر الصاج." },
+        { title: "دعم فني واستشارات هندسية", desc: "فريقنا الهندسي يقدم لكم المشورة حول توزيع التيوبات، طريقة التثبيت، وحساب المقاسات بدقة." }
       ]
     },
     services: {
       title: "خدماتنا",
-      subtitle: "حلول أسقف شاملة",
+      subtitle: "تصنيع، توريد، ودعم فني متكامل للمشاريع",
       items: [
         {
-          title: "تصنيع ألواح  PVC",
-          desc: "ألواح PVC عالية الجودة تتميز بالمتانة ومقاومة العوامل الجوية والعزل الحراري."
+          title: "تصنيع وتوريد ألواح UPVC",
+          desc: "خطوط إنتاج آلية حديثة بطاقات استيعابية عالية مع قص أطوال خاصة حتى 12 متراً لتلبية احتياجات الهناجر والمصانع."
         },
         {
-          title: "ألواح بولي كربونايت",
-          desc: "ألواح قوية ومتعددة الاستخدامات مناسبة للقباب السماوية والصوبات الزراعية."
+          title: "ألواح بولي كربونايت عالية الجودة",
+          desc: "ألواح مصمتة ومفرغة لنفاذية الضوء الطبيعي وتغطيات القباب السماوية، والمظلات، والصوبات الزراعية."
         },
         {
-          title: "التوريد والتركيب",
-          desc: "فرق تركيب محترفة وتوصيل آمن إلى موقعك."
+          title: "التوريد والشحن لكافة المحافظات",
+          desc: "شحن آمن وتوصيل مباشر من مصنعنا بمدينة السادات إلى موقع مشروعك في أي مكان داخل مصر."
         },
         {
-          title: "الدعم الفني",
-          desc: "مشورة الخبراء ودعم لجميع احتياجاتك الفنية المتعلقة بالأسقف."
+          title: "الدعم الفني والاستشارات الهندسية",
+          desc: "توجيهات فنية للمهندسين والمقاولين لتحديد المسافات المثالية للهياكل الحديدية وطرق التثبيت المعتمدة."
         },
         {
-          title: "استشارات التصميم",
-          desc: "حلول تصميم مخصصة تتناسب مع رؤيتك المعمارية."
+          title: "حساب الكميات وتفصيل المقاسات",
+          desc: "مراجعة المخططات الهندسية لحساب عدد الأمتار والألواح والملحقات لمنع الهدر وتقليل التكلفة الإجمالية."
         }
       ]
     },
     projects: {
       title: "مشاريعنا",
-      subtitle: "لمحة من تميزنا",
-      desc: "تصفح معرض مشاريعنا المكتملة في القطاعات السكنية والتجارية والصناعية."
+      subtitle: "نماذج حية لأعمالنا المنفذة",
+      desc: "تصفح معرض مشاريعنا المنفذة في كبرى المصانع، الهناجر، مزارع الدواجن، والمنشآت التجارية والسكنية."
+    },
+    faq: {
+      title: "الأسئلة الشائعة (FAQ)",
+      subtitle: "إجابات واضحة على أهم استفسارات المهندسين، المقاولين، وأصحاب المصانع والمزارع.",
+      items: [
+        {
+          question: "لماذا أختار ألواح UPVC كبديل للصاج المعرج والزنك؟",
+          answer: "الصاج التقليدي يتعرض للصدأ السريع والتآكل بفعل الرطوبة والكيماويات، ويسرب حرارة شديدة داخل المكان، ويصدر صوتاً مزعجاً للغاية عند هطول الأمطار. في المقابل، ألواح كنانة UPVC لا تصدأ نهائياً، وتوفر عزلاً حرارياً يخفض الحرارة حتى 10 درجات، وتكتم صوت الأمطار حتى 30 ديسيبل، وتتحمل الكيماويات مع ضمان 10 سنوات."
+        },
+        {
+          question: "هل ألواح UPVC مقاومة للحريق والاشتعال؟",
+          answer: "نعم، ألواح كنانة مصنفة Class B1 لمقاومة الحريق، وهي مادة ذاتية الإطفاء (Self-extinguishing)؛ أي أنها تتوقف عن الاشتعال ذاتياً بمجرد إبعاد مصدر اللهب، ولا تساهم في انتشار الحريق ولا تسقط قطرات مشتعلة."
+        },
+        {
+          question: "ما هي مدة الضمان وما هي البنود التي يغطيها؟",
+          answer: "نقدم ضماناً مصنعياً موثقاً لمدة 10 سنوات يشمل عيوب الصناعة، ثبات اللون (بفضل طبقة الـ ASA المقاومة للأشعة فوق البنفسجية)، ومقاومة التقوس والتآكل وتسريب المياه في الظروف الجوية الطبيعية."
+        },
+        {
+          question: "هل يتم التوريد والشحن إلى جميع محافظات مصر؟",
+          answer: "نعم، يتم التوريد والشحن المباشر من مصنعنا في مدينة السادات (المنطقة الصناعية السابعة) إلى كافة محافظات الجمهورية (القاهرة، الجيزة، الإسكندرية، الدلتا، القناة، والصعيد) بأسطول نقل آمن وبأسرع وقت."
+        },
+        {
+          question: "هل يمكن تفصيل وقص أطوال محددة وفقاً لمخطط الجمالون أو المصنع؟",
+          answer: "بالتأكيد، نوفر إمكانية قص وتصنيع أطوال مخصصة حسب طلب العميل ومخطط المشروع حتى طول 12 متراً للوح الواحد، لتجنب الوصلات العرضية وضمان العزل التام ضد المياه."
+        }
+      ]
+    },
+    quote: {
+      modalTitle: "طلب عرض سعر رسمي مباشر من المصنع",
+      modalSubtitle: "املأ بيانات مشروعك وسيقوم فريق المبيعات والدعم الفني بمصنع السادات بالتواصل معك وتقديم أفضل سعر.",
+      name: "الاسم بالكامل",
+      namePlaceholder: "أدخل اسمك أو اسم المسؤول",
+      company: "اسم الشركة / المصنع",
+      companyPlaceholder: "اسم المنشأة أو المصنع أو المزرعة (اختياري)",
+      phone: "رقم الهاتف للتواصل",
+      phonePlaceholder: "مثال: 01027000979",
+      whatsapp: "رقم الواتساب",
+      whatsappPlaceholder: "مثال: 01027000979",
+      projectType: "نوع المشروع",
+      projectTypes: [
+        "مصنع / هنجر صناعي",
+        "مزرعة دواجن أو إنتاج حيواني",
+        "مستودع / مخزن تخزين",
+        "فيلا / برجولة سكنية",
+        "مظلات ومواقف سيارات",
+        "صالة ألعاب / قبة سماوية (سكاي لايت)",
+        "أخرى"
+      ],
+      governorate: "المحافظة وموقع المشروع",
+      governorates: [
+        "القاهرة",
+        "الجيزة",
+        "المنوفية / مدينة السادات",
+        "الإسكندرية",
+        "الشرقية / العاشر من رمضان",
+        "القليوبية",
+        "البحيرة",
+        "الغربية",
+        "الدقهلية",
+        "السويس / الإسماعيلية / بورسعيد",
+        "بني سويف / الفيوم",
+        "محافظات الصعيد",
+        "البحر الأحمر / جنوب سيناء",
+        "خارج مصر (تصدير)"
+      ],
+      product: "المنتج المطلوب",
+      products: [
+        "ألواح UPVC رباعية الطبقات (قرميدي معرج)",
+        "ألواح UPVC ترابيزي (Trapeze)",
+        "ألواح بولي كربونايت مصمت / مفرغ",
+        "ملحقات وتراكيب (قبب/أركان، مسامير تثبيت مانعة للتسريب)",
+        "نظام سقف متكامل (ألواح + استشارة تركيب)"
+      ],
+      quantity: "الكمية التقريبية (م² أو عدد الألواح)",
+      quantityPlaceholder: "مثال: 450 م² أو 100 لوح",
+      dimensions: "الأبعاد والأطوال المطلوبة",
+      dimensionsPlaceholder: "مثال: أطوال 6 متر، 8 متر، أو أطوال مفصلة",
+      thickness: "السُمك المطلوب",
+      thicknesses: ["1.5 مم", "2.0 مم (الموصى به)", "2.5 مم (للأحمال الشاقة)", "3.0 مم (الصناعي الأقصى)"],
+      color: "اللون المفضل",
+      colors: ["قرميدي (Terracotta Red)", "أزرق ملكي (Royal Blue)", "أبيض عاجي (Pure White)", "رمادي (Slate Grey)"],
+      notes: "المخطط الهندسي أو ملاحظات إضافية",
+      notesPlaceholder: "اذكر أي تفاصيل إضافية عن المسافة بين التيوبات، موعد التوريد، أو أي متطلبات خاصة...",
+      submitWhatsApp: "إرسال عبر واتساب (أسرع)",
+      submitEmail: "إرسال عبر البريد الإلكتروني",
+      submitting: "جاري تجهيز الطلب...",
+      successTitle: "تم استلام طلب عرض السعر بنجاح!",
+      successDesc: "شكراً لتواصلك مع كنانة رووف. سيقوم مهندس المبيعات بمراجعة مواصفات مشروعك والتواصل معك فوراً.",
+      close: "إغلاق"
     },
     contact: {
       title: "تواصل معنا",
-      subtitle: "ابقى على تواصل",
+      subtitle: "المصنع الرئيسي - زيارات واستفسارات التوريد",
       form: {
         name: "الاسم",
+        company: "اسم الشركة / المنشأة",
         email: "البريد الإلكتروني",
         phone: "رقم الهاتف",
-        message: "الرسالة",
+        projectType: "نوع المشروع",
+        message: "الرسالة أو تفاصيل الطلب",
         submit: "إرسال الرسالة"
       },
       info: {
-        address: "مصر، المنوفية، مدينة السادات، المنطقة الصناعية الخامسة، قطعة 115",
+        address: "مصر، محافظة المنوفية، مدينة السادات، المنطقة الصناعية السابعة",
         email: "kananaroof@gmail.com",
-        phone: "+201222522624"
+        phone: "+201027000979",
+        displayPhone: "01027000979",
+        whatsapp: "+201027000979",
+        workingHours: "السبت - الخميس: 8:00 ص - 5:00 م (الجمعة عطلة أسبوعية)",
+        googleMapsUrl: "https://maps.google.com/?q=Sadat+City+7th+Industrial+Zone+Egypt"
       }
     },
     footer: {
-      rights: "© 2025 كنانه روفنج شيت. جميع الحقوق محفوظة."
+      rights: "© 2025 كنانة رووف (Kanana Roof). جميع الحقوق محفوظة.",
+      quick_links: "روابط سريعة",
+      catalog: "تحميل الكتالوج الفني PDF",
+      factory_location: "المنطقة الصناعية بمدينة السادات"
     }
   }
 };

@@ -10,13 +10,13 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
 
     const metadata = {
         en: {
-            title: "Kanana Roofing Sheet | UPVC & PVC Roofing Manufacturer Egypt",
-            description: "Leading manufacturer of eco-friendly UPVC roofing sheets, plastic broom bristles, and roofing solutions. Exporting globally from Egypt.",
-            keywords: "Roofing sheet supplier, PVC roof tiles, Plastic roofing manufacturer Egypt, Kanana Plast, Industrial roofing"
+            title: "Kanana Roof | UPVC Roofing Sheets Manufacturer & Supplier Egypt",
+            description: "Official manufacturer of heavy-duty 4-layer UPVC & Polycarbonate roofing sheets engineered with ASA anti-weathering layer. Factory in 7th Industrial Zone, Sadat City, Egypt. 10-Year Warranty.",
+            keywords: "Kanana Roof, UPVC Roofing Sheets Egypt, Kanana Roofing, Corrugated plastic roof sheets, UPVC manufacturer Sadat City, Factory roofing alternatives, ASA roofing tiles Egypt"
         },
         ar: {
-            title: "كنانه روفنج شيت | مصنع ألواح تغطية بديل الصاج",
-            description: "المصنع الرائد في مصر لإنتاج ألواح السقف البلاستيكية المعزولة وبديل الصاج والقرميد."
+            title: "كنانة رووف | مصنع ألواح UPVC للأسقف وبديل الصاج المعرج - مدينة السادات",
+            description: "المصنع الرسمي لإنتاج وتوريد ألواح UPVC والبولي كربونايت رباعية الطبقات المعزولة حرارياً والبديل الهندسي للصاج والزنك بضمان 10 سنوات. المنطقة الصناعية السابعة، مدينة السادات."
         }
     };
 
@@ -24,20 +24,52 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
 
     const schemaData = {
         "@context": "https://schema.org",
-        "@type": "ManufacturingBusiness",
-        "name": "Kanana Roofing Sheet",
+        "@type": "LocalBusiness",
+        "additionalType": "https://schema.org/ManufacturingBusiness",
+        "name": isArabic ? "كنانة رووف" : "Kanana Roof",
+        "alternateName": ["كنانة رووف", "Kanana Roof", "ألواح كنانة رووف", "Kanana Roofing"],
         "url": "https://kananaroof.com",
         "logo": "https://kananaroof.com/logo.png",
-        "description": "Manufacturer of PVC roofing materials and plastic filaments.",
+        "image": "https://kananaroof.com/logo.png",
+        "telephone": "+201027000979",
+        "email": "kananaroof@gmail.com",
+        "description": "Manufacturer and supplier of heavy-duty 4-layer UPVC and Polycarbonate roofing sheets with 10-year warranty for industrial hangars, factories, warehouses, and farms.",
         "address": {
             "@type": "PostalAddress",
-            "addressCountry": "EG",
-            "addressLocality": "Sadat City"
+            "streetAddress": "7th Industrial Zone",
+            "addressLocality": "Sadat City",
+            "addressRegion": "Menoufia",
+            "addressCountry": "EG"
         },
-        "areaServed": "World",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "30.40827",
+            "longitude": "30.50508"
+        },
+        "hasMap": "https://maps.google.com/?q=Sadat+City+7th+Industrial+Zone+Egypt",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+                "opens": "08:00",
+                "closes": "17:00"
+            }
+        ],
+        "priceRange": "$$",
+        "areaServed": [
+            {
+                "@type": "Country",
+                "name": "Egypt"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Middle East & Africa"
+            }
+        ],
         "sameAs": [
-            "https://www.linkedin.com/company/kanana-roofing",
-            "https://www.facebook.com/kananaroofing"
+            "https://www.facebook.com/profile.php?id=61585448343390",
+            "https://x.com/KananaRoof",
+            "https://www.instagram.com/kananaroof/"
         ]
     };
 
@@ -46,15 +78,21 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
             <html lang={lang} dir={isArabic ? 'rtl' : 'ltr'} />
             <title>{currentMeta.title}</title>
             <meta name="description" content={currentMeta.description} />
-            {/* English keywords are usually sufficient for global SEO, but adding them here */}
             {!isArabic && <meta name="keywords" content={metadata.en.keywords} />}
+
+            {/* Open Graph / Facebook */}
+            <meta property="og:type" content="business.business" />
+            <meta property="og:title" content={currentMeta.title} />
+            <meta property="og:description" content={currentMeta.description} />
+            <meta property="og:url" content={`https://kananaroof.com/${lang}`} />
+            <meta property="og:site_name" content={isArabic ? "كنانة رووف" : "Kanana Roof"} />
 
             {/* Hreflang Tags */}
             <link rel="alternate" hrefLang="ar-EG" href="https://kananaroof.com/ar" />
             <link rel="alternate" hrefLang="en" href="https://kananaroof.com/en" />
-            <link rel="alternate" hrefLang="x-default" href="https://kananaroof.com/en" />
+            <link rel="alternate" hrefLang="x-default" href="https://kananaroof.com/ar" />
 
-            {/* Structured Data */}
+            {/* Structured Data (Google Maps & Search Sync) */}
             <script type="application/ld+json">
                 {JSON.stringify(schemaData)}
             </script>
