@@ -196,62 +196,62 @@ export const content: Record<'en' | 'ar', Content> = {
         {
           id: "thickness",
           title: "Thickness Options",
-          value: "1.5mm - 2.0mm - 2.5mm - 3.0mm",
-          desc: "Multiple thicknesses engineered for different purlin spans and structural load requirements."
+          value: "2.0mm — 2.5mm — 3.0mm",
+          desc: "Three certified thicknesses: 2.0mm (purlin spacing ≤75 cm), 2.5mm (≤130 cm), 3.0mm (≤140 cm). Custom industrial thicknesses available on request."
         },
         {
           id: "dimensions",
           title: "Dimensions & Width",
-          value: "1130 mm (1050 mm Effective)",
-          desc: "Full width of 1130mm providing a net effective roofing coverage of 1050mm after overlap, with custom lengths up to 12 meters."
+          value: "Total: 1130 mm | Effective: 1050 mm",
+          desc: "Total sheet width 1130mm with a net effective roofing coverage of 1050mm after overlap. Custom cut lengths up to 12 meters to eliminate joints."
         },
         {
           id: "weight",
           title: "Unit Weight",
-          value: "3.2 - 5.5 kg/m²",
-          desc: "Lightweight profile drastically lowers steel structural burden while offering superior impact resistance."
+          value: "3.2 – 5.5 kg/m²",
+          desc: "Lightweight profile drastically lowers dead structural load on steel frames while providing superior impact resistance compared to metal sheets."
         },
         {
           id: "colors",
-          title: "Factory Colors",
-          value: "Terracotta Red, Royal Blue, Pure White, Slate Grey",
-          desc: "Surface infused with genuine ASA polymer layer to prevent fading, chalking, and UV deterioration for decades."
+          title: "8 Factory Colors (ASA Co-Extrusion)",
+          value: "White · Cafe · Dark Grey · Light Grey · Terracotta · Orange · Navy Blue · Light Blue",
+          desc: "8 premium factory colors infused into the ASA co-extrusion outer layer, guaranteeing zero fading, zero chalking, and full UV resistance for decades."
         },
         {
           id: "thermal",
-          title: "Thermal Insulation",
-          value: "Conductivity: 0.14 W/m.K (8-10°C Cooler)",
-          desc: "Cuts indoor temperature by up to 10°C compared to zinc and galvanized corrugated steel, drastically reducing cooling electricity bills."
+          title: "Thermal Insulation (ASTM C1363)",
+          value: "Conductivity 0.14 W/m.K — Reduces heat by 28.54%",
+          desc: "Certified by ASTM C1363 lab test. Cuts indoor temperature by 8–10°C vs. galvanized steel sheets, drastically reducing cooling electricity bills."
         },
         {
           id: "sound",
-          title: "Acoustic / Sound Insulation",
-          value: "Up to 30 dB Noise Reduction",
-          desc: "Eliminates torrential rain and hail noise, maintaining a serene and quiet interior in factories and livestock facilities."
+          title: "Sound Insulation (ASTM E90)",
+          value: "21.86 dB certified (up to 30 dB reduction)",
+          desc: "Certified ASTM E90 test result of 21.86 dB. Eliminates torrential rain and hail noise — ideal for factories, poultry farms, and livestock facilities."
         },
         {
           id: "corrosion",
           title: "Chemical & Corrosion Resistance",
-          value: "100% Acid, Alkali, Salt & Ammonia Immune",
-          desc: "Will NEVER rust or corrode. Perfect for chemical plants, fertilizers, coastal warehouses, and poultry farms."
+          value: "100% Immune: Acids · Alkalis · Salt · Ammonia",
+          desc: "Will NEVER rust or corrode. Ideal for chemical plants, fertilizer factories, coastal warehouses, poultry farms, and high-humidity industrial zones."
         },
         {
           id: "fire",
-          title: "Fire Safety Rating",
-          value: "Class B1 Flame Retardant",
-          desc: "Self-extinguishing material; stops burning immediately when fire source is removed, producing zero flaming droplets."
+          title: "Fire Safety Rating (UL 94)",
+          value: "Class B1 — Self-Extinguishing",
+          desc: "Certified UL 94 Class B1 flame retardant. Self-extinguishing — stops burning immediately once flame source is removed, producing zero flaming droplets."
         },
         {
-          id: "strength",
-          title: "Impact Strength & Load Bearing",
-          value: "High Mechanical Rigidity & Toughness",
-          desc: "Engineered multi-layer elasticity withstands severe hail impacts, falling objects, and maintenance walking loads without cracking."
+          id: "flexural",
+          title: "Flexural Strength (ASTM D790)",
+          value: "27.19 N/mm² Bending Resistance",
+          desc: "Lab-certified ASTM D790 flexural strength of 27.19 N/mm². Multi-layer elasticity withstands hail impacts, walking loads, and heavy snow without cracking."
         },
         {
           id: "warranty",
           title: "Manufacturer Warranty",
-          value: "10-Year Documented Warranty",
-          desc: "Comprehensive 10-year factory warranty against manufacturing defects, material degradation, and color fading."
+          value: "Official 10-Year Written Warranty",
+          desc: "Comprehensive 10-year factory warranty against manufacturing defects, material degradation, structural integrity failure, and abnormal color fading."
         }
       ],
       advantages: [
@@ -395,20 +395,22 @@ export const content: Record<'en' | 'ar', Content> = {
       ],
       product: "Requested Product",
       products: [
-        "UPVC 4-Layer Roofing Sheets (Corrugated)",
-        "UPVC Trapeze Profile Sheets",
-        "Polycarbonate Solid / Hollow Sheets",
-        "Roofing Ridge Caps & Screws Accessories",
-        "Complete Roofing System (Sheets + Installation Advice)"
+        "UPVC Trapezoidal Roofing Sheets (Solid)",
+        "UPVC Corrugated Sheets (Corgit)",
+        "UPVC Tile Wave Sheets (Qarmid Profile)",
+        "Polycarbonate Roofing Sheets",
+        "UPVC Rain Gutters (30×25×10 cm)",
+        "Accessories (Ridge Caps, Screws & PVC Caps)",
+        "Complete Roofing System (Sheets + Technical Advice)"
       ],
       quantity: "Estimated Quantity (m² or sheet count)",
       quantityPlaceholder: "e.g. 500 m² or 120 sheets",
       dimensions: "Required Sheet Lengths & Dimensions",
-      dimensionsPlaceholder: "e.g. 6-meter sheets, 8-meter sheets, or custom",
+      dimensionsPlaceholder: "e.g. 6-meter sheets, 8-meter sheets, or custom up to 12m",
       thickness: "Required Thickness",
-      thicknesses: ["1.5 mm", "2.0 mm (Recommended)", "2.5 mm (Heavy Duty)", "3.0 mm (Industrial High Load)"],
-      color: "Preferred Color",
-      colors: ["Terracotta Red (قرميدي)", "Royal Blue (أزرق ملكي)", "Pure White (أبيض)", "Slate Grey (رمادي)"],
+      thicknesses: ["2.0 mm (Standard — Purlins ≤75 cm)", "2.5 mm (Heavy Duty — Purlins ≤130 cm)", "3.0 mm (Industrial — Purlins ≤140 cm)"],
+      color: "Preferred Factory Color",
+      colors: ["White (أبيض)", "Cafe (كافيه)", "Dark Grey (رمادي غامق)", "Light Grey (رمادي فاتح)", "Terracotta (طوبي / قرميدي)", "Orange (برتقالي)", "Navy Blue (كحلي)", "Light Blue (أزرق فاتح)"],
       notes: "Project Blueprint / Additional Notes",
       notesPlaceholder: "Mention specific details, steel purlin distances, delivery timeline, or questions...",
       submitWhatsApp: "Send via WhatsApp (Fastest)",
@@ -477,62 +479,62 @@ export const content: Record<'en' | 'ar', Content> = {
         {
           id: "thickness",
           title: "السُمك المتاح (Thickness)",
-          value: "1.5 مم - 2.0 مم - 2.5 مم - 3.0 مم",
-          desc: "سماكات متعددة تناسب مختلف المسافات بين التيوبات (Purlins) وأحمال الرياح والجمالونات."
+          value: "2.0 مم — 2.5 مم — 3.0 مم",
+          desc: "ثلاث سماكات معتمدة: 2.0مم (مدادات ≤75 سم)، 2.5مم (مدادات ≤130 سم)، 3.0مم (مدادات ≤140 سم). سماكات خاصة متاحة للمشاريع الصناعية الكبرى."
         },
         {
           id: "dimensions",
           title: "الأبعاد والعرض (Dimensions)",
-          value: "العرض الكلي 1130 مم (الصافي الفعال 1050 مم)",
-          desc: "يوفر عرض اللوح تغطية صافية واسعة بعد احتساب الركوب، مع إمكانية تصنيع أي طول مطلوب حتى 12 متراً لتفادي الوصلات."
+          value: "الإجمالي: 1130 مم | الصافي الفعال: 1050 مم",
+          desc: "العرض الكلي للوح 1130مم والتغطية الصافية الفعلية 1050مم بعد الركوب، مع إمكانية تصنيع أي طول مطلوب حتى 12 متراً لتفادي الوصلات."
         },
         {
           id: "weight",
           title: "الوزن الهندسي (Weight)",
           value: "3.2 إلى 5.5 كجم / م²",
-          desc: "خفيف الوزن يقلل الحمل الميت على الهياكل والجمالونات المعدنية مع متانة فائقة ضد الكسر والصدمات."
+          desc: "خفيف الوزن يقلل الحمل الميت على الهياكل والجمالونات المعدنية مع متانة فائقة ضد الكسر والصدمات في الظروف الجوية القاسية."
         },
         {
           id: "colors",
-          title: "ألوان المصنع (Colors)",
-          value: "قرميدي (Terracotta)، أزرق ملكي، أبيض عاجي، رمادي",
-          desc: "طبقة خارجية غنية ببوليمر ASA الأصلي المقاوم للأشعة فوق البنفسجية لضمان ثبات اللون لسنوات طويلة دون بهتان."
+          title: "8 ألوان مصنعية (ASA Co-Extrusion)",
+          value: "أبيض · كافيه · رمادي غامق · رمادي فاتح · طوبي · برتقالي · كحلي · أزرق فاتح",
+          desc: "8 ألوان مصنعية رئيسية مدموجة في طبقة البثق المشترك ASA الخارجية بضمان كامل ضد الأشعة فوق البنفسجية والبهتان والتطاير لعقود."
         },
         {
           id: "thermal",
-          title: "العزل الحراري (Thermal Insulation)",
-          value: "معامل توصيل 0.14 W/m.K (فارق 8-10 درجات مئوية)",
-          desc: "يخفض درجات الحرارة داخل المصانع والمزارع بنسبة تصل إلى 10 درجات مقارنة بالصاج المعرج، مما يوفر فاتورة التبريد والكهرباء."
+          title: "العزل الحراري (ASTM C1363)",
+          value: "معامل توصيل 0.14 W/m.K — خفض 28.54%",
+          desc: "معتمد بكود ASTM C1363 المعملي. يخفض درجات حرارة الداخل بمقدار 8-10 درجات مئوية مقارنة بالصاج مما يوفر فاتورة التكييف والكهرباء."
         },
         {
           id: "sound",
-          title: "العزل الصوتي (Sound Insulation)",
-          value: "عزل ضوضاء حتى 30 ديسيبل",
-          desc: "يمنع تماماً صوت المطر الشديد وحبات البرد، مما يوفر بيئة عمل هادئة ومثالية لحظائر الإنتاج الحيواني والمصانع."
+          title: "العزل الصوتي (ASTM E90)",
+          value: "21.86 ديسيبل معتمدة (حتى 30 ديسيبل خفض)",
+          desc: "نتيجة اختبار ASTM E90 المعتمدة: 21.86 ديسيبل. يمنع تماماً ضجيج الأمطار الشديدة والبرد — مثالي للمصانع، حظائر الدواجن، والمنشآت الحيوانية."
         },
         {
           id: "corrosion",
-          title: "مقاومة التآكل والكيماويات (Chemical Resistance)",
-          value: "مقاومة 100% للأحماض والأملاح والأمونيا والصدأ",
-          desc: "لا يصدأ ولا يتآكل نهائياً؛ مثالي لمصانع الكيماويات والأسمدة والمناطق الساحلية ومزارع الدواجن والماشية."
+          title: "مقاومة التآكل والكيماويات",
+          value: "مقاومة 100%: أحماض · قلويات · أملاح · أمونيا",
+          desc: "لا يصدأ ولا يتآكل نهائياً. مثالي لمصانع الكيماويات، الأسمدة، المناطق الساحلية، مزارع الدواجن، وأي بيئة ذات رطوبة أو أبخرة كيميائية."
         },
         {
           id: "fire",
-          title: "مقاومة الحريق (Fire Retardancy)",
-          value: "فئة B1 ذاتي الإطفاء",
-          desc: "مادة غير مساعدة على الاشتعال؛ تنطفئ ذاتياً فور إبعاد مصدر اللهب ولا تنتج قطرات مشتعلة أثناء الحريق."
+          title: "مقاومة الحريق (UL 94)",
+          value: "فئة B1 — ذاتي الإطفاء",
+          desc: "معتمد بكود UL 94 فئة B1. مادة ذاتية الإطفاء تتوقف عن الاشتعال فور إبعاد مصدر اللهب ولا تنتج قطرات مشتعلة ولا تساهم في انتشار الحريق."
         },
         {
-          id: "strength",
-          title: "مقاومة الصدمات والأحمال (Impact Resistance)",
-          value: "مرونة هندسية وتحمل صدمات وأوزان حية",
-          desc: "تتحمل الألواح تساقط البرد وحبات الثلج الكبيرة وأحمال العمالة أثناء التركيب والصيانة دون تشقق أو انكسار بفضل مرونة الـ UPVC."
+          id: "flexural",
+          title: "مقاومة الانحناء (ASTM D790)",
+          value: "27.19 نيوتن/مم² مقاومة انحناء",
+          desc: "نتيجة اختبار ASTM D790 المعتمدة: 27.19 نيوتن/مم². المرونة متعددة الطبقات تتحمل تساقط البرد الكبير وأحمال الصيانة والثلوج دون تشقق أو انكسار."
         },
         {
           id: "warranty",
           title: "الضمان المعتمد (Warranty)",
-          value: "ضمان حقيقي موثق لمدة 10 سنوات",
-          desc: "ضمان رسمي من مصنعنا بمدينة السادات ضد عيوب التصنيع وتغير المواصفات وتآكل المواد."
+          value: "ضمان رسمي موثق لمدة 10 سنوات",
+          desc: "ضمان مصنعي رسمي موثق بمدينة السادات ضد عيوب التصنيع، تدهور المواد، وتغير اللون غير الطبيعي في ظروف التعرض لأشعة الشمس المباشرة."
         }
       ],
       advantages: [
@@ -676,20 +678,22 @@ export const content: Record<'en' | 'ar', Content> = {
       ],
       product: "المنتج المطلوب",
       products: [
-        "ألواح UPVC رباعية الطبقات (قرميدي معرج)",
-        "ألواح UPVC ترابيزي (Trapeze)",
-        "ألواح بولي كربونايت مصمت / مفرغ",
-        "ملحقات وتراكيب (قبب/أركان، مسامير تثبيت مانعة للتسريب)",
+        "ألواح UPVC مصمتة ترابيزية (بديل الصاج)",
+        "ألواح UPVC كورجيت (Corrugated — معرجة)",
+        "ألواح UPVC شكل القرميد (Tile Wave)",
+        "ألواح بولي كربونايت للإضاءة الطبيعية",
+        "مجرى مطر UPVC (30×25×10 سم)",
+        "ملحقات (طلمبوشة، مسامير 7 سم، كابات PVC ملونة)",
         "نظام سقف متكامل (ألواح + استشارة تركيب)"
       ],
       quantity: "الكمية التقريبية (م² أو عدد الألواح)",
       quantityPlaceholder: "مثال: 450 م² أو 100 لوح",
       dimensions: "الأبعاد والأطوال المطلوبة",
-      dimensionsPlaceholder: "مثال: أطوال 6 متر، 8 متر، أو أطوال مفصلة",
+      dimensionsPlaceholder: "مثال: أطوال 6 متر، 8 متر، أو أطوال مفصلة حتى 12 متر",
       thickness: "السُمك المطلوب",
-      thicknesses: ["1.5 مم", "2.0 مم (الموصى به)", "2.5 مم (للأحمال الشاقة)", "3.0 مم (الصناعي الأقصى)"],
-      color: "اللون المفضل",
-      colors: ["قرميدي (Terracotta Red)", "أزرق ملكي (Royal Blue)", "أبيض عاجي (Pure White)", "رمادي (Slate Grey)"],
+      thicknesses: ["2.0 مم (قياسي — مدادات ≤75 سم)", "2.5 مم (أحمال شاقة — مدادات ≤130 سم)", "3.0 مم (صناعي — مدادات ≤140 سم)"],
+      color: "اللون المفضل من ألوان المصنع",
+      colors: ["أبيض (White)", "كافيه (Cafe)", "رمادي غامق (Dark Grey)", "رمادي فاتح (Light Grey)", "طوبي / قرميدي (Terracotta)", "برتقالي (Orange)", "كحلي (Navy Blue)", "أزرق فاتح (Light Blue)"],
       notes: "المخطط الهندسي أو ملاحظات إضافية",
       notesPlaceholder: "اذكر أي تفاصيل إضافية عن المسافة بين التيوبات، موعد التوريد، أو أي متطلبات خاصة...",
       submitWhatsApp: "إرسال عبر واتساب (أسرع)",
