@@ -89,6 +89,14 @@ const Footer: React.FC = () => {
                                 {contact.email}
                             </a>
                         </li>
+                        {contact.website && (
+                        <li className="flex gap-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-terracotta-500 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <a href={`https://${contact.website}`} target="_blank" rel="noreferrer" className="hover:text-terracotta-400 font-medium" dir="ltr">
+                                {contact.website}
+                            </a>
+                        </li>
+                        )}
                         <li className="pt-2">
                             <a
                                 href={`https://wa.me/${contact.phone.replace('+', '')}?text=${encodeURIComponent(language === 'ar' ? 'السلام عليكم، استفسار بخصوص ألواح كنانة رووف' : 'Hello, inquiring about Kanana Roof UPVC Sheets')}`}

@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
             `📝 *الرسالة:* ${formState.message}\n` +
             `━━━━━━━━━━━━━━━━━━━━`;
         
-        const url = `https://wa.me/201027000979?text=${encodeURIComponent(msg)}`;
+        const url = `https://wa.me/${info.whatsapp.replace('+', '')}?text=${encodeURIComponent(msg)}`;
         window.open(url, '_blank');
         setSent(true);
     };
@@ -116,6 +116,21 @@ const Contact: React.FC = () => {
                                             </a>
                                         </div>
                                     </div>
+
+                                    {/* Website */}
+                                    {info.website && (
+                                    <div className="flex items-center gap-4">
+                                        <div className="bg-terracotta-50 p-3 rounded-xl text-terracotta-600 shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-gray-900">{language === 'en' ? 'Official Website' : 'الموقع الرسمي'}</h4>
+                                            <a href={`https://${info.website}`} target="_blank" rel="noreferrer" className="text-terracotta-600 hover:underline text-sm font-medium" dir="ltr">
+                                                {info.website}
+                                            </a>
+                                        </div>
+                                    </div>
+                                    )}
                                 </div>
 
                                 <div className="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-3">

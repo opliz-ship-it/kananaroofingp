@@ -70,6 +70,7 @@ export interface ContactInfo {
   displayPhone: string;
   whatsapp: string;
   workingHours: string;
+  website?: string;
   googleMapsUrl: string;
 }
 
@@ -433,13 +434,14 @@ export const content: Record<'en' | 'ar', Content> = {
         submit: "Send Message"
       },
       info: {
-        address: "Egypt, Menoufia, Sadat City, 7th Industrial Zone",
+        address: "Egypt, Menoufia, Sadat City, 5th Industrial Zone",
         email: "kananaroof@gmail.com",
-        phone: "+201027000979",
-        displayPhone: "01027000979",
-        whatsapp: "+201027000979",
+        phone: "+201222522624",
+        displayPhone: "01222522624",
+        whatsapp: "+201222522624",
         workingHours: "Saturday - Thursday: 8:00 AM - 5:00 PM (Friday Closed)",
-        googleMapsUrl: "https://maps.google.com/?q=Sadat+City+7th+Industrial+Zone+Egypt"
+        website: "www.kananaroof.com",
+        googleMapsUrl: "https://maps.google.com/?q=Sadat+City+5th+Industrial+Zone+Menoufia+Egypt"
       }
     },
     footer: {
@@ -716,13 +718,14 @@ export const content: Record<'en' | 'ar', Content> = {
         submit: "إرسال الرسالة"
       },
       info: {
-        address: "مصر، محافظة المنوفية، مدينة السادات، المنطقة الصناعية السابعة",
+        address: "مصر، محافظة المنوفية، مدينة السادات، المنطقة الصناعية الخامسة",
         email: "kananaroof@gmail.com",
-        phone: "+201027000979",
-        displayPhone: "01027000979",
-        whatsapp: "+201027000979",
+        phone: "+201222522624",
+        displayPhone: "01222522624",
+        whatsapp: "+201222522624",
         workingHours: "السبت - الخميس: 8:00 ص - 5:00 م (الجمعة عطلة أسبوعية)",
-        googleMapsUrl: "https://maps.google.com/?q=Sadat+City+7th+Industrial+Zone+Egypt"
+        website: "www.kananaroof.com",
+        googleMapsUrl: "https://maps.google.com/?q=Sadat+City+5th+Industrial+Zone+Menoufia+Egypt"
       }
     },
     footer: {
