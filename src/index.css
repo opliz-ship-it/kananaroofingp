@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -13,7 +13,7 @@
   --color-terracotta-800: #80382A;
   --color-terracotta-900: #5F281E;
 
-  --color-industrial-gray: #2D3436;
+  --color-industrial-gray: #1E232A;
   --color-industrial-light: #F8F9FA;
 
   --font-en: 'Inter', sans-serif;
@@ -22,14 +22,16 @@
 
 @layer base {
   body {
-    @apply bg-industrial-light text-industrial-gray antialiased;
-    font-family: var(--font-en);
+    background-color: #F8F9FA;
+    color: #1E232A;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
-  body.rtl {
-    font-family: var(--font-ar);
-    direction: rtl;
-    text-align: right;
+  html[dir="rtl"],
+  body.rtl,
+  [dir="rtl"] {
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif !important;
   }
 }
 

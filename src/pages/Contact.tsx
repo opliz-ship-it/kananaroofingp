@@ -141,15 +141,16 @@ const Contact: React.FC = () => {
                             </div>
 
                             {/* Google Map Box */}
-                            <div className="bg-white p-2 rounded-2xl shadow-sm h-72 overflow-hidden border border-gray-100">
+                            <div className="bg-white p-2 rounded-2xl shadow-sm h-72 overflow-hidden border border-gray-100 relative">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110185.73693259858!2d30.5050843!3d30.4082705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14588e79e763bcf3%3A0x6b107e3240e53a0!2sSadat%20City%2C%20Menofia%20Governorate!5e0!3m2!1sen!2seg!4v1634567890123!5m2!1sen!2seg"
+                                    src="https://maps.google.com/maps?q=Sadat+City+7th+Industrial+Zone+Egypt&t=&z=14&ie=UTF8&iwloc=&output=embed"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
                                     allowFullScreen={true}
                                     loading="lazy"
                                     title="Kanana Roof Location in Sadat City"
+                                    className="w-full h-full rounded-xl"
                                 ></iframe>
                             </div>
                         </div>

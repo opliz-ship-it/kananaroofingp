@@ -95,33 +95,33 @@ const QuoteModal: React.FC = () => {
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm overflow-y-auto animate-fade-in">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
             <div 
-                className="relative w-full max-w-3xl my-8 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100"
+                className="relative w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 max-h-[92vh] flex flex-col"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
-                <div className="bg-gradient-to-r from-terracotta-600 to-terracotta-500 text-white p-6 relative">
+                <div className="bg-gradient-to-r from-terracotta-600 to-terracotta-500 text-white p-5 sm:p-6 relative shrink-0">
                     <button
                         onClick={closeQuoteModal}
-                        className="absolute top-5 ltr:right-5 rtl:left-5 text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
+                        className="absolute top-4 ltr:right-4 rtl:left-4 text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
                         aria-label={t.close}
                     >
                         <X size={24} />
                     </button>
                     <div className="flex items-center gap-3">
-                        <div className="p-3 bg-white/10 rounded-xl">
-                            <Layers size={28} className="text-white" />
+                        <div className="p-2.5 sm:p-3 bg-white/10 rounded-xl shrink-0">
+                            <Layers size={26} className="text-white" />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-bold">{t.modalTitle}</h2>
-                            <p className="text-sm text-white/90 mt-1">{t.modalSubtitle}</p>
+                            <h2 className="text-xl sm:text-2xl font-bold">{t.modalTitle}</h2>
+                            <p className="text-xs sm:text-sm text-white/90 mt-0.5">{t.modalSubtitle}</p>
                         </div>
                     </div>
                 </div>
 
                 {submitted ? (
-                    <div className="p-8 text-center space-y-4">
+                    <div className="p-8 text-center space-y-4 overflow-y-auto">
                         <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto">
                             <CheckCircle2 size={40} />
                         </div>
@@ -140,7 +140,7 @@ const QuoteModal: React.FC = () => {
                         </div>
                     </div>
                 ) : (
-                    <form className="p-6 md:p-8 space-y-6">
+                    <form className="p-5 sm:p-8 space-y-6 overflow-y-auto">
                         {/* Section 1: Client & Enterprise Info */}
                         <div className="space-y-4">
                             <h4 className="text-xs font-bold uppercase tracking-wider text-terracotta-600 flex items-center gap-2">

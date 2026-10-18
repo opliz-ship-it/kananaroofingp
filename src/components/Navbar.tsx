@@ -76,13 +76,36 @@ const Navbar: React.FC = () => {
                 </Link>
 
                 {/* Desktop Links & Actions */}
-                <div className="hidden lg:flex items-center gap-7">
-                    <NavItem id="hero" label={text.home} />
-                    <NavItem id="specs" label={language === 'ar' ? 'المواصفات الفنية' : 'Tech Specs'} />
-                    <NavItem id="services" label={text.services} />
-                    <NavItem id="projects" label={text.projects} />
-                    <NavItem id="faq" label={language === 'ar' ? 'الأسئلة الشائعة' : 'FAQ'} />
-                    <NavItem id="contact" label={text.contact} />
+                <div className="hidden lg:flex items-center gap-6">
+                    <Link to="/" className="font-medium text-gray-700 hover:text-terracotta-600 transition-colors text-sm">
+                        {text.home}
+                    </Link>
+                    <Link to="/about" className="font-medium text-gray-700 hover:text-terracotta-600 transition-colors text-sm">
+                        {text.about}
+                    </Link>
+                    <a
+                        href="#specs"
+                        onClick={(e) => handleNavClick(e, 'specs')}
+                        className="font-medium text-gray-700 hover:text-terracotta-600 transition-colors text-sm"
+                    >
+                        {language === 'ar' ? 'المواصفات الفنية' : 'Tech Specs'}
+                    </a>
+                    <Link to="/services" className="font-medium text-gray-700 hover:text-terracotta-600 transition-colors text-sm">
+                        {text.services}
+                    </Link>
+                    <Link to="/projects" className="font-medium text-gray-700 hover:text-terracotta-600 transition-colors text-sm">
+                        {text.projects}
+                    </Link>
+                    <a
+                        href="#faq"
+                        onClick={(e) => handleNavClick(e, 'faq')}
+                        className="font-medium text-gray-700 hover:text-terracotta-600 transition-colors text-sm"
+                    >
+                        {language === 'ar' ? 'الأسئلة الشائعة' : 'FAQ'}
+                    </a>
+                    <Link to="/contact" className="font-medium text-gray-700 hover:text-terracotta-600 transition-colors text-sm">
+                        {text.contact}
+                    </Link>
 
                     {/* Language Switcher */}
                     <button
@@ -97,10 +120,10 @@ const Navbar: React.FC = () => {
                         {language === 'en' ? 'العربية' : 'English'}
                     </button>
 
-                    {/* Quote Button (Requested in Notes) */}
+                    {/* Quote Button */}
                     <button
                         onClick={() => openQuoteModal()}
-                        className="inline-flex items-center gap-2 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold px-5 py-2.5 rounded-full transition-all shadow-md shadow-terracotta-600/20 hover:scale-105 text-sm"
+                        className="inline-flex items-center gap-2 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold px-4 py-2 rounded-full transition-all shadow-md shadow-terracotta-600/20 hover:scale-105 text-xs sm:text-sm"
                     >
                         <Calculator size={16} />
                         <span>{text.quote}</span>
@@ -124,12 +147,27 @@ const Navbar: React.FC = () => {
 
                 {/* Mobile Dropdown */}
                 <div className={`absolute top-20 left-0 right-0 bg-white shadow-xl p-5 flex flex-col gap-4 lg:hidden transition-all duration-300 origin-top border-b border-gray-100 ${isOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'}`}>
-                    <NavItem id="hero" label={text.home} />
-                    <NavItem id="specs" label={language === 'ar' ? 'المواصفات الفنية للمهندسين' : 'Engineering Specs'} />
-                    <NavItem id="services" label={text.services} />
-                    <NavItem id="projects" label={text.projects} />
-                    <NavItem id="faq" label={language === 'ar' ? 'الأسئلة الشائعة' : 'FAQ'} />
-                    <NavItem id="contact" label={text.contact} />
+                    <Link to="/" onClick={closeMenu} className="font-medium text-gray-800 hover:text-terracotta-600 py-1">
+                        {text.home}
+                    </Link>
+                    <Link to="/about" onClick={closeMenu} className="font-medium text-gray-800 hover:text-terracotta-600 py-1">
+                        {text.about}
+                    </Link>
+                    <a href="#specs" onClick={(e) => handleNavClick(e, 'specs')} className="font-medium text-gray-800 hover:text-terracotta-600 py-1">
+                        {language === 'ar' ? 'المواصفات الفنية' : 'Engineering Specs'}
+                    </a>
+                    <Link to="/services" onClick={closeMenu} className="font-medium text-gray-800 hover:text-terracotta-600 py-1">
+                        {text.services}
+                    </Link>
+                    <Link to="/projects" onClick={closeMenu} className="font-medium text-gray-800 hover:text-terracotta-600 py-1">
+                        {text.projects}
+                    </Link>
+                    <a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="font-medium text-gray-800 hover:text-terracotta-600 py-1">
+                        {language === 'ar' ? 'الأسئلة الشائعة' : 'FAQ'}
+                    </a>
+                    <Link to="/contact" onClick={closeMenu} className="font-medium text-gray-800 hover:text-terracotta-600 py-1">
+                        {text.contact}
+                    </Link>
 
                     <div className="pt-2 border-t border-gray-100 flex flex-col gap-3">
                         <button

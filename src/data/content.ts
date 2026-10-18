@@ -242,6 +242,12 @@ export const content: Record<'en' | 'ar', Content> = {
           desc: "Self-extinguishing material; stops burning immediately when fire source is removed, producing zero flaming droplets."
         },
         {
+          id: "strength",
+          title: "Impact Strength & Load Bearing",
+          value: "High Mechanical Rigidity & Toughness",
+          desc: "Engineered multi-layer elasticity withstands severe hail impacts, falling objects, and maintenance walking loads without cracking."
+        },
+        {
           id: "warranty",
           title: "Manufacturer Warranty",
           value: "10-Year Documented Warranty",
@@ -515,6 +521,12 @@ export const content: Record<'en' | 'ar', Content> = {
           title: "مقاومة الحريق (Fire Retardancy)",
           value: "فئة B1 ذاتي الإطفاء",
           desc: "مادة غير مساعدة على الاشتعال؛ تنطفئ ذاتياً فور إبعاد مصدر اللهب ولا تنتج قطرات مشتعلة أثناء الحريق."
+        },
+        {
+          id: "strength",
+          title: "مقاومة الصدمات والأحمال (Impact Resistance)",
+          value: "مرونة هندسية وتحمل صدمات وأوزان حية",
+          desc: "تتحمل الألواح تساقط البرد وحبات الثلج الكبيرة وأحمال العمالة أثناء التركيب والصيانة دون تشقق أو انكسار بفضل مرونة الـ UPVC."
         },
         {
           id: "warranty",

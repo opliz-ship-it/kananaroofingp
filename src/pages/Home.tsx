@@ -88,6 +88,7 @@ const Home = () => {
             case 'sound': return <VolumeX className="text-blue-500" size={24} />;
             case 'corrosion': return <ShieldCheck className="text-emerald-500" size={24} />;
             case 'fire': return <Flame className="text-rose-500" size={24} />;
+            case 'strength': return <ShieldCheck className="text-indigo-500" size={24} />;
             case 'warranty': return <ShieldCheck className="text-terracotta-600" size={24} />;
             default: return <CheckCircle className="text-terracotta-500" size={24} />;
         }
@@ -436,16 +437,21 @@ const Home = () => {
                         </div>
 
                         {/* Google Maps iFrame */}
-                        <div className="h-80 lg:h-96 w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10 relative">
+                        <div className="h-80 lg:h-96 w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10 relative bg-gray-900 group">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110185.73693259858!2d30.5050843!3d30.4082705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14588e79e763bcf3%3A0x6b107e3240e53a0!2sSadat%20City%2C%20Menofia%20Governorate!5e0!3m2!1sen!2seg!4v1634567890123!5m2!1sen!2seg"
+                                src="https://maps.google.com/maps?q=Sadat+City+7th+Industrial+Zone+Egypt&t=&z=14&ie=UTF8&iwloc=&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
                                 allowFullScreen={true}
                                 loading="lazy"
                                 title="Kanana Roof Factory Location in Sadat City"
+                                className="w-full h-full"
                             ></iframe>
+                            <div className="absolute top-3 ltr:left-3 rtl:right-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-md text-xs font-bold text-gray-800 flex items-center gap-1.5 pointer-events-none">
+                                <MapPin size={14} className="text-terracotta-600" />
+                                <span>{language === 'ar' ? 'المنطقة الصناعية السابعة - السادات' : '7th Industrial Zone, Sadat City'}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
