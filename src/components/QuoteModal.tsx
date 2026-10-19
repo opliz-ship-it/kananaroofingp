@@ -79,7 +79,7 @@ const QuoteModal: React.FC = () => {
     const handleWhatsAppSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         const text = encodeURIComponent(formatMessageText());
-        const phone = "201027000979";
+        const phone = "201222522624";
         const url = `https://wa.me/${phone}?text=${text}`;
         window.open(url, '_blank');
         setSubmitted(true);
@@ -96,7 +96,7 @@ const QuoteModal: React.FC = () => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-            <div 
+            <div
                 className="relative w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 max-h-[92vh] flex flex-col"
                 onClick={(e) => e.stopPropagation()}
             >
