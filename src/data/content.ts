@@ -198,7 +198,7 @@ export const content: Record<'en' | 'ar', Content> = {
           id: "thickness",
           title: "Thickness Options",
           value: "2.0mm — 2.5mm — 3.0mm",
-          desc: "Three certified thicknesses: 2.0mm (purlin spacing ≤75 cm), 2.5mm (≤130 cm), 3.0mm (≤140 cm). Custom industrial thicknesses available on request."
+          desc: "Three factory-certified UPVC thicknesses engineered for different structural loads: 2.0 mm (Standard) — ideal for purlin spacing ≤75 cm; 2.5 mm (Heavy-Duty) — supports spacing ≤130 cm; 3.0 mm (Industrial Grade) — designed for wide-span structures with spacing ≤140 cm. All thicknesses produced via 4-layer ASA co-extrusion technology. Custom industrial thicknesses available on request for large-scale projects."
         },
         {
           id: "dimensions",
@@ -482,7 +482,7 @@ export const content: Record<'en' | 'ar', Content> = {
           id: "thickness",
           title: "السُمك المتاح (Thickness)",
           value: "2.0 مم — 2.5 مم — 3.0 مم",
-          desc: "ثلاث سماكات معتمدة: 2.0مم (مدادات ≤75 سم)، 2.5مم (مدادات ≤130 سم)، 3.0مم (مدادات ≤140 سم). سماكات خاصة متاحة للمشاريع الصناعية الكبرى."
+          desc: "ثلاث سماكات مصنعية معتمدة مُصنَّعة بتقنية البثق الرباعي المشترك ASA، مُختارة وفق الحمل الإنشائي والمسافات بين المدادات: 2.0 مم (قياسي) — للمدادات بمسافة ≤75 سم؛ 2.5 مم (أحمال شاقة) — يستوعب مسافات ≤130 سم؛ 3.0 مم (صناعي) — مُصمَّم للجمالونات ذات الفتحات الواسعة ومسافات ≤140 سم. سماكات صناعية خاصة متاحة حسب الطلب للمشاريع الكبرى."
         },
         {
           id: "dimensions",

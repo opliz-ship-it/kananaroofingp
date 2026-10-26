@@ -28,6 +28,9 @@ import { client, urlFor } from '../client';
 import project1 from '../assets/project1.jpg';
 import project2 from '../assets/project2.jpg';
 import project3 from '../assets/project3.jpg';
+import project4 from '../assets/project4.jpg';
+import project5 from '../assets/project5.jpg';
+import project6 from '../assets/project6.jpg';
 import heroBg from '../assets/hero-bg.jpg';
 
 interface SanityProject {
@@ -56,10 +59,13 @@ const Home = () => {
         { _id: 'static-1', img: project1, titleAr: "مصنع أسمدة - تغطية جمالون كاملة", titleEn: "Chemical Plant Hangar", isStatic: true },
         { _id: 'static-2', img: project2, titleAr: "مزرعة دواجن - عزل حراري وصوتي", titleEn: "Poultry Farm Thermal Roofing", isStatic: true },
         { _id: 'static-3', img: project3, titleAr: "مستودعات تخزين لوجستي", titleEn: "Logistics Warehouse Roof", isStatic: true },
+        { _id: 'static-4', img: project4, titleAr: "منشأة صناعية - تغطية UPVC بالكامل", titleEn: "Industrial Facility UPVC Roofing", isStatic: true },
+        { _id: 'static-5', img: project5, titleAr: "حظيرة مواشي كبيرة - عزل متكامل", titleEn: "Livestock Barn — Full Insulation", isStatic: true },
+        { _id: 'static-6', img: project6, titleAr: "مشروع المنطقة الصناعية السادسة", titleEn: "6th Industrial Zone Project", isStatic: true },
     ];
 
     useEffect(() => {
-        client.fetch<SanityProject[]>(`*[_type == "project"] | order(_createdAt desc)[0...3]`)
+        client.fetch<SanityProject[]>(`*[_type == "project"] | order(_createdAt desc)[0...6]`)
             .then((data) => {
                 if (data && data.length > 0) {
                     setSanityProjects(data);
@@ -268,7 +274,7 @@ const Home = () => {
                         <p className="text-gray-600">{text.projects.desc}</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         {loading ? (
                             Array.from({ length: 3 }).map((_, idx) => (
                                 <div key={`skeleton-${idx}`} className="animate-pulse bg-gray-200 rounded-xl aspect-video w-full flex items-center justify-center">
