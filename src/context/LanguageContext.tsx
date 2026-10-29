@@ -13,7 +13,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [language, setLanguage] = useState<Language>(() => {
-        return (localStorage.getItem('lang') as Language) || 'en';
+        return (localStorage.getItem('lang') as Language) || 'ar';
     });
 
     const direction = language === 'ar' ? 'rtl' : 'ltr';
@@ -22,9 +22,13 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
         localStorage.setItem('lang', language);
         if (language === 'ar') {
             document.body.classList.add('rtl');
+            document.documentElement.dir = 'rtl';
+            document.documentElement.lang = 'ar';
             document.dir = 'rtl';
         } else {
             document.body.classList.remove('rtl');
+            document.documentElement.dir = 'ltr';
+            document.documentElement.lang = 'en';
             document.dir = 'ltr';
         }
     }, [language]);

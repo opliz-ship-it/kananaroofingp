@@ -158,7 +158,7 @@ const Contact: React.FC = () => {
                             {/* Google Map Box */}
                             <div className="bg-white p-2 rounded-2xl shadow-sm h-72 overflow-hidden border border-gray-100 relative">
                                 <iframe
-                                    src="https://maps.google.com/maps?q=Sadat+City+7th+Industrial+Zone+Egypt&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                                    src="https://maps.google.com/maps?q=Kanana+Roof+Sadat+City&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}

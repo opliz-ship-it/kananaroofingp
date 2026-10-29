@@ -348,7 +348,7 @@ export const content: Record<'en' | 'ar', Content> = {
         },
         {
           question: "Do you supply and deliver to all Egyptian governorates?",
-          answer: "Yes, we dispatch directly from our factory in Sadat City (7th Industrial Zone) to all Egyptian governorates—including Cairo, Giza, Alexandria, Delta, Suez Canal, and Upper Egypt—with secure loading and fast turnaround."
+          answer: "Yes, we dispatch directly from our factory in Sadat City (5th Industrial Zone) to all Egyptian governorates—including Cairo, Giza, Alexandria, Delta, Suez Canal, and Upper Egypt—with secure loading and fast turnaround."
         },
         {
           question: "Can I order custom sheet lengths to match my steel frame design?",
@@ -434,14 +434,14 @@ export const content: Record<'en' | 'ar', Content> = {
         submit: "Send Message"
       },
       info: {
-        address: "Egypt, Menoufia, Sadat City, 5th Industrial Zone",
+        address: "Egypt, Menoufia, Sadat City, 5th Industrial Zone, Plot 115",
         email: "kananaroof@gmail.com",
         phone: "+201222522624",
         displayPhone: "01222522624",
         whatsapp: "+201222522624",
         workingHours: "Saturday - Thursday: 8:00 AM - 5:00 PM (Friday Closed)",
         website: "www.kananaroof.com",
-        googleMapsUrl: "https://maps.google.com/?q=Sadat+City+5th+Industrial+Zone+Menoufia+Egypt"
+        googleMapsUrl: "https://maps.google.com/?q=30.387001,30.562778"
       }
     },
     footer: {
@@ -548,8 +548,8 @@ export const content: Record<'en' | 'ar', Content> = {
     },
     about: {
       title: "من نحن",
-      subtitle: "كنانة رووف - المنطقة الصناعية السابعة بمدينة السادات",
-      story: "شركة كنانة رووف هي أحد الصروح الصناعية المتخصصة في إنتاج وتصنيع أنظمة الأسقف الحديثة من ألواح UPVC والبولي كربونايت. انطلاقاً من مصنعنا المتطور في المنطقة الصناعية السابعة بمدينة السادات بمحافظة المنوفية، نقدم حلولاً هندسية متكاملة تعالج كافة عيوب الصاج التقليدي والمعادن المعرضة للتآكل.",
+      subtitle: "كنانة رووف - المنطقة الصناعية الخامسة بمدينة السادات",
+      story: "شركة كنانة رووف هي أحد الصروح الصناعية المتخصصة في إنتاج وتصنيع أنظمة الأسقف الحديثة من ألواح UPVC والبولي كربونايت. انطلاقاً من مصنعنا المتطور في المنطقة الصناعية الخامسة بمدينة السادات بمحافظة المنوفية، نقدم حلولاً هندسية متكاملة تعالج كافة عيوب الصاج التقليدي والمعادن المعرضة للتآكل.",
       our_values_title: "التزامنا بالجودة",
       our_values_text: "نحن لا نقبل المساومة في خاماتنا؛ نعتمد على أنقى المواد الخام مع إضافات الحماية الأوروبية وطبقة الـ ASA لضمان منتج يعيش لعقود، مدعوماً بضمان معتمد لمدة 10 سنوات.",
       mission_title: "مهمتنا",
@@ -632,7 +632,7 @@ export const content: Record<'en' | 'ar', Content> = {
         },
         {
           question: "هل يتم التوريد والشحن إلى جميع محافظات مصر؟",
-          answer: "نعم، يتم التوريد والشحن المباشر من مصنعنا في مدينة السادات (المنطقة الصناعية السابعة) إلى كافة محافظات الجمهورية (القاهرة، الجيزة، الإسكندرية، الدلتا، القناة، والصعيد) بأسطول نقل آمن وبأسرع وقت."
+          answer: "نعم، يتم التوريد والشحن المباشر من مصنعنا في مدينة السادات (المنطقة الصناعية الخامسة، قطعة 115) إلى كافة محافظات الجمهورية (القاهرة، الجيزة، الإسكندرية، الدلتا، القناة، والصعيد) بأسطول نقل آمن وبأسرع وقت."
         },
         {
           question: "هل يمكن تفصيل وقص أطوال محددة وفقاً لمخطط الجمالون أو المصنع؟",
@@ -718,14 +718,14 @@ export const content: Record<'en' | 'ar', Content> = {
         submit: "إرسال الرسالة"
       },
       info: {
-        address: "مصر، محافظة المنوفية، مدينة السادات، المنطقة الصناعية الخامسة",
+        address: "مصر، محافظة المنوفية، مدينة السادات، المنطقة الصناعية الخامسة، قطعة 115",
         email: "kananaroof@gmail.com",
         phone: "+201222522624",
         displayPhone: "01222522624",
         whatsapp: "+201222522624",
         workingHours: "السبت - الخميس: 8:00 ص - 5:00 م (الجمعة عطلة أسبوعية)",
         website: "www.kananaroof.com",
-        googleMapsUrl: "https://maps.google.com/?q=Sadat+City+5th+Industrial+Zone+Menoufia+Egypt"
+        googleMapsUrl: "https://maps.google.com/?q=30.387001,30.562778"
       }
     },
     footer: {

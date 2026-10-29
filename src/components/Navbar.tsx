@@ -47,17 +47,7 @@ const Navbar: React.FC = () => {
         }
     }, [location]);
 
-    const NavItem = ({ id, label }: { id: string; label: string }) => {
-        return (
-            <a
-                href={`#${id}`}
-                onClick={(e) => handleNavClick(e, id)}
-                className="font-medium text-gray-700 hover:text-terracotta-600 transition-colors"
-            >
-                {label}
-            </a>
-        );
-    };
+
 
     return (
         <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm h-20 flex items-center border-b border-gray-100">

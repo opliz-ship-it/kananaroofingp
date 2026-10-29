@@ -43,10 +43,10 @@ const SEO: React.FC<SEOProps> = ({ lang }) => {
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "30.40827",
-            "longitude": "30.50508"
+            "latitude": "30.387001",
+            "longitude": "30.562778"
         },
-        "hasMap": "https://maps.google.com/?q=Sadat+City+7th+Industrial+Zone+Egypt",
+        "hasMap": "https://maps.google.com/?q=30.387001,30.562778",
         "openingHoursSpecification": [
             {
                 "@type": "OpeningHoursSpecification",
