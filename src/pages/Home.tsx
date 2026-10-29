@@ -39,6 +39,11 @@ import project9 from '../assets/project9.jpg';
 import project10 from '../assets/project10.jpg';
 import project11 from '../assets/project11.jpg';
 import project12 from '../assets/project12.jpg';
+import project13 from '../assets/project13.jpg';
+import project14 from '../assets/project14.jpg';
+import project15 from '../assets/project15.jpg';
+import project16 from '../assets/project16.jpg';
+import project17 from '../assets/project17.jpg';
 import heroBg from '../assets/hero-bg.jpg';
 
 export interface SanityProject {
@@ -47,7 +52,7 @@ export interface SanityProject {
     titleAr?: string;
     descriptionEn?: string;
     descriptionAr?: string;
-    category?: 'hangars' | 'farms' | 'warehouses' | 'canopies';
+    category?: 'hangars' | 'farms' | 'warehouses' | 'canopies' | 'products';
     tagAr?: string;
     tagEn?: string;
     locationAr?: string;
@@ -237,6 +242,76 @@ const Home = () => {
             locationEn: "Qalyubia Governorate",
             descriptionAr: "تنسيق هندسي مباشر مع مهندسي الموقع لمطابقة مسافات المدادات مع سماكة ألواح UPVC المختارة.",
             descriptionEn: "Direct engineering collaboration matching purlin spacing to the selected UPVC sheet thickness.",
+            isStatic: true 
+        },
+        { 
+            _id: 'static-13', 
+            img: project13, 
+            titleAr: "توريد ألواح كنانة رووف المعرجة - جاهزية الشحن المباشر", 
+            titleEn: "Kanana Corrugated UPVC Roofing Sheets — Dispatch Ready", 
+            category: 'products',
+            tagAr: "ألواح معالجة ASA - مقاومة للأشعة فوق البنفسجية",
+            tagEn: "ASA Treated - Full UV & Weather Shield",
+            locationAr: "مقر المصنع - المنطقة الصناعية الخامسة بالسادات",
+            locationEn: "Factory Yard - 5th Industrial Zone, Sadat City",
+            descriptionAr: "شحنات ألواح كنانة رووف الصفراء المعرجة مجهزة ومعبأة ومغلفة بأعلى معايير الأمان للتحميل المباشر إلى مواقع المشاريع.",
+            descriptionEn: "Bundles of yellow corrugated Kanana UPVC sheets securely palletized and inspected for direct delivery to project sites.",
+            isStatic: true 
+        },
+        { 
+            _id: 'static-14', 
+            img: project14, 
+            titleAr: "إكسسوارات وقطع ألواح كنانة رووف للجمالونات وذروة السقف", 
+            titleEn: "Kanana UPVC Ridge Caps & Flashing Accessories", 
+            category: 'products',
+            tagAr: "قطع تكميلية محكمة لمنع تسريب مياه الأمطار",
+            tagEn: "Complementary Ridge Caps for Leak-Proof Sealing",
+            locationAr: "مستودعات الإنتاج - مدينة السادات",
+            locationEn: "Production Storage, Sadat City",
+            descriptionAr: "تصنيع قطع الإكسسوارات والذروات وكفرات الزوايا من نفس خامة ألواح UPVC لضمان إحكام تام وعزل كامل للمياه والرياح.",
+            descriptionEn: "Factory-fabricated ridge caps and flashings engineered from identical UPVC resin ensuring seamless watertight integrity.",
+            isStatic: true 
+        },
+        { 
+            _id: 'static-15', 
+            img: project15, 
+            titleAr: "ألواح كنانة رووف الخضراء العازلة لمزارع الدواجن والجمالونات", 
+            titleEn: "Green Insulated UPVC Sheets for Poultry & Industrial Hangars", 
+            category: 'farms',
+            tagAr: "عزل حراري 28.5% ومقاومة تامة لغاز الأمونيا",
+            tagEn: "28.5% Thermal Reduction & 100% Ammonia Immune",
+            locationAr: "خطوط إنتاج المصنع - السادات",
+            locationEn: "Manufacturing Lines, Sadat City",
+            descriptionAr: "ألواح UPVC خضراء مميزة ومخصصة لبيئات الإنتاج الحيواني ومزارع الدواجن والهناجر لمقاومة غازات التخمر والرطوبة المرتفعة.",
+            descriptionEn: "Specialized green UPVC sheets engineered for agricultural poultry farms and high-humidity environments.",
+            isStatic: true 
+        },
+        { 
+            _id: 'static-16', 
+            img: project16, 
+            titleAr: "قطاع موجات وسماكات ألواح كنانة UPVC متعددة الطبقات", 
+            titleEn: "Multi-Layer Corrugated UPVC Wave Profile & Thickness", 
+            category: 'products',
+            tagAr: "بثق رباعي مشترك ASA - سماكات مصنعية حتى 3.0 مم",
+            tagEn: "4-Layer ASA Co-Extrusion — Up to 3.0mm Thickness",
+            locationAr: "مختبر الجودة والإنتاج - السادات",
+            locationEn: "Quality & Testing Lab, Sadat City",
+            descriptionAr: "مقطع دقيق يوضح تموجات الألواح وتماسك الطبقات الأربع مع طبقة ASA الخارجية التي تضمن المتانة والصلابة لعشرات السنوات.",
+            descriptionEn: "Detailed profile cross-section demonstrating corrugation depth, composite density, and genuine ASA weather skin.",
+            isStatic: true 
+        },
+        { 
+            _id: 'static-17', 
+            img: project17, 
+            titleAr: "تجهيز وتحميل طلبيات ألواح كنانة لكبرى المشاريع الهندسية", 
+            titleEn: "Heavy-Duty Bundles Prepared for Major Engineering Projects", 
+            category: 'warehouses',
+            tagAr: "أطوال مخصصة حتى 12 متراً وتحميل سريع",
+            tagEn: "Custom Lengths up to 12m with Rapid Loading",
+            locationAr: "ساحة التحميل المباشر - مدينة السادات",
+            locationEn: "Dispatch Yard, Sadat City",
+            descriptionAr: "رصات منتجات كنانة رووف جاهزة للتوزيع لكبرى شركات المقاولات والإنشاءات الصناعية بجميع محافظات مصر.",
+            descriptionEn: "Fully prepared consignments of Kanana roofing sheets ready for nationwide delivery to construction contractors.",
             isStatic: true 
         }
     ];
@@ -467,11 +542,12 @@ const Home = () => {
                     {/* Category Filter Pills */}
                     <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">
                         {[
-                            { id: 'all', labelAr: `جميع المشاريع (${rawProjects.length})`, labelEn: `All Projects (${rawProjects.length})` },
+                            { id: 'all', labelAr: `جميع المشاريع والمنتجات (${rawProjects.length})`, labelEn: `All (${rawProjects.length})` },
                             { id: 'hangars', labelAr: 'مصانع وهناجر جمالون', labelEn: 'Factories & Hangars' },
                             { id: 'farms', labelAr: 'مزارع دواجن وإنتاج حيواني', labelEn: 'Poultry & Livestock Farms' },
                             { id: 'warehouses', labelAr: 'مستودعات ولوجستيات', labelEn: 'Logistics Warehouses' },
                             { id: 'canopies', labelAr: 'مظلات وتطبيقات معمارية', labelEn: 'Canopies & Pergolas' },
+                            { id: 'products', labelAr: 'ألواح وقطاعات المصنع', labelEn: 'Factory Sheets & Profiles' },
                         ].map((cat) => {
                             const isActive = activeCategory === cat.id;
                             return (
@@ -631,7 +707,7 @@ const Home = () => {
 
                     <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link to="/projects" className="inline-flex items-center gap-2 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-terracotta-600/30 transition-all hover:scale-105">
-                            <span>{isRTL ? 'تصفح كل المشاريع والصور (12 مشروع)' : 'Browse Full Gallery (12 Projects)'}</span>
+                            <span>{isRTL ? `تصفح كل المشاريع والصور (${rawProjects.length} مشروع وصورة)` : `Browse Full Gallery (${rawProjects.length} Photos)`}</span>
                             {arrowIcon}
                         </Link>
                         <button
